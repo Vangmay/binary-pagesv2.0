@@ -1,15 +1,27 @@
 import {whiten} from '@chakra-ui/theme-tools'
+
 export const ButtonStyles = {
-    baseStyle:{},
+    baseStyle:{
+
+    },
     sizes:{},
     variants:{
-        primary:{
-            bg:'red',
-            color:'white',
+        dark:{
+            color:'cyan.300',
             _hover:{
-                bg:whiten('red',200)
+                color:'pink.500',
+                textDecoration:'underline'
+            }
+        },
+        light:{
+            color:'black',
+            _hover:{
+                color:'orange.500',
+                textDecoration:'underline'
             }
         }
     },
-    defaultProps:{}
+    defaultProps:{
+        
+    }
 }
