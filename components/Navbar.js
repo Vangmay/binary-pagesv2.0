@@ -9,7 +9,11 @@ import {
     Spacer,
     Container,
     IconButton,
-    Fade,
+    Fade, 
+    ScaleFade, 
+    Slide, 
+    SlideFade,
+    useDisclosure
 } from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
 import NextLink from 'next/link'
@@ -17,7 +21,6 @@ import { HamburgerIcon, CloseIcon} from '@chakra-ui/icons'
 import{ React,useState} from 'react'
 import { IoLogoGithub } from 'react-icons/io5'
 import { MoonIcon,SunIcon } from '@chakra-ui/icons'
-
 
 export const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -28,6 +31,9 @@ export const Navbar = () => {
     const navBg = useColorModeValue('orange.100','gray.900')
     const colorScheme = useColorModeValue("black","purple.400")
     const variantt = useColorModeValue('light','dark')
+    const Home_bg = useColorModeValue('green.200','#2D3748')
+    const Home_variant = useColorModeValue('home_light','home_dark')
+    const { isOpen, onToggle } = useDisclosure()
     return (
         <Box 
             w='full' 
@@ -51,7 +57,26 @@ export const Navbar = () => {
             >
 
                 <Flex align='center' w='full'>
-                    <Text fontFamily="Monospace" marginRight={3} color = {color} >The binary pages</Text>
+                    <NextLink href='/' passHref>
+                        <Button    
+                            leftIcon={<SunIcon/>}
+                            background={Home_bg}
+                            variant={Home_variant}
+                        >
+                            <Text 
+                                cursor='pointer'
+                                fontFamily="Monospace" marginRight={3} 
+                                 
+                                transition='0.13s ease-out'
+                                fontWeight='800'
+                                fontSize={15}
+                            >The binary pages</Text>
+                            
+
+                        </Button>
+
+
+                    </NextLink>
                     <NextLink href="/" passHref>
                         <Button as="a" color = {color}  leftIcon={<IoLogoGithub/>} variant={variantt} aria-label="Home" my={5} >
                         Source
@@ -117,6 +142,7 @@ export const Navbar = () => {
                     onClick={()=>{
                         changeDisplay('flex')
                         changeIconDisplay('none')
+                        
                     }}
                     marginRight={2}
                     variant={variantt}
@@ -129,6 +155,8 @@ export const Navbar = () => {
                     onClick={toggleColorMode}
                 >
                 </IconButton>
+                {/* mobile nav -------------------------------------------------*/}
+            
                 <Container
                     display={display}
                     w='100vw'
@@ -176,7 +204,7 @@ export const Navbar = () => {
                                 Blogs
                             </Button>
                         </NextLink>
-                     */}
+                    */}
                     
                         {/* <NextLink href="/contact" passHref>
                             <Button as="a" colorScheme="teal" variant='ghost' color = {color} aria-label="Contact" my={5} marginX={2} >
@@ -185,6 +213,7 @@ export const Navbar = () => {
                         </NextLink> */}
                     </Flex>
                 </Container>
+                
             </Container>
         </Box>
 
