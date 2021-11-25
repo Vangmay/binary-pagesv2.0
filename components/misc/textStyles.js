@@ -17,9 +17,17 @@ export const TextStyles = {
             _hover:{
                 color:'orange.500'
             }
+        },
+        primary:{
+            color:'gray.400'
+
+        },
+        heading:{
+            color:'white'
         }
+        
     },
     defaultProps:{
-        
+        fontFamily:'Red Hat Mono' 
     }
 }
