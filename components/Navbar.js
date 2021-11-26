@@ -36,11 +36,10 @@ export const Navbar = () => {
     const { isOpen, onToggle } = useDisclosure()
     return (
         <Box 
-            w='full' 
+            w='100vw' 
             bg={navBg}
             color='white' 
             as='nav'
-            backdropFilter="blur(1222px)"
             padding={0}
             margin={0}
         >
@@ -66,10 +65,11 @@ export const Navbar = () => {
                             <Text 
                                 cursor='pointer'
                                 fontFamily="Monospace" marginRight={3} 
-                                 
+                                letterSpacing='0px'
                                 transition='0.13s ease-out'
                                 fontWeight='800'
-                                fontSize={15}
+                                display={['none','flex','flex']}
+                                fontSize={[4,10,15,15]}
                             >The binary pages</Text>
                             
 
@@ -78,7 +78,7 @@ export const Navbar = () => {
 
                     </NextLink>
                     <NextLink href="/" passHref>
-                        <Button as="a" color = {color}  leftIcon={<IoLogoGithub/>} variant={variantt} aria-label="Home" my={5} >
+                        <Button as="a" color = {color}  leftIcon={<IoLogoGithub/>} variant={variantt} aria-label="Home" mx={2} my={5} >
                         Source
                         </Button>
                     </NextLink>
@@ -171,6 +171,9 @@ export const Navbar = () => {
                         flexDirection='column'
                         // display={['none','none','flex','flex']}
                     >
+                            
+
+
                         <IconButton
                             icon = {<CloseIcon/>}
                             

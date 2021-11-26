@@ -19,8 +19,12 @@ export const TextStyles = {
             }
         },
         primary:{
-            color:'gray.400'
+            color:'gray.400',
+            
 
+        },
+        primary_light:{
+            color:'orange.100'
         },
         heading:{
             color:'white'

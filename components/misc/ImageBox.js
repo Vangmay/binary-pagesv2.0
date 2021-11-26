@@ -1,7 +1,9 @@
+import { useColorModeValue } from '@chakra-ui/color-mode'
 import { Box, Container, HStack,Text } from '@chakra-ui/layout'
 import React from 'react'
 
 export const ImageBox = () => {
+    const text_variant = useColorModeValue('primary_light','primary')
     return (
         <Box 
         w="100%" 
@@ -11,29 +13,36 @@ export const ImageBox = () => {
         bgSize='cover'
         bgPosition='left'
         bgRepeat='no-repeat'
-        justifyContent='center'
+        alignItems='center'
         textAlign='right'
-
+        justifyContent='right'
+        display='flex'
         
         >
-                <Container float='right' w='100%'  >
+            <Box 
+                maxH='100%' 
+                maxW='50%'
+                float='right'
+                alignItems='center'
+                justifyContent='center'
+                marginRight='30px'
+            >
                     
-                    <Text  fontSize='20px'
-                        variant='primary'
-                    >
-                        About me
+                    <Text  fontSize='40px'
+                        variant={text_variant}
+                        w='100%'
+                        >
                     </Text>
                     <Text 
                         fontFamily='Red Hat Mono'
                         
-                        fontSize='18px' 
-                        variant='primary'
+                        fontSize={[10,13,15,17]} 
+                        variant={text_variant}
                         w='full'
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dolor nunc, venenatis et vestibulum ac, dictum vitae massa. Vestibulum auctor magna non dolor egestas sollicitudin. Vestibulum ut lorem nec metus ornare semper sed in lacus. Phasellus tristique vestibulum enim, quis venenatis dui mollis sit amet. Nunc venenatis aliquam fringilla. Suspendisse sodales ipsum lacus, a lacinia velit feugiat ac. Curabitur vehicula iaculis neque, nec semper neque consequat eget. Nulla turpis metus, gravida nec magna eget, aliquet euismod neque. Donec ipsum nunc, dictum eu quam at, porttitor viverra est.</Text>
+                    </Text>
                 
-                </Container>
-            
+            </Box>
         </Box>
 
     )
