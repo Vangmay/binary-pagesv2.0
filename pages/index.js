@@ -1,10 +1,11 @@
+import { background } from '@chakra-ui/styled-system'
 import Head from 'next/head'
 import Image from 'next/image'
 import { About } from '../components/misc/about'
 import { ImageBox } from '../components/misc/ImageBox'
 import Navbar from '../components/Navbar'
 import styles from '../styles/Home.module.css'
-
+import { Box } from '@chakra-ui/layout'
 export default function Home() {
   return (
     <div>
@@ -14,7 +15,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ImageBox/>
-      <About/>
+        <About/>
+      
 
 
         

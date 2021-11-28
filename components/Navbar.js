@@ -36,12 +36,13 @@ export const Navbar = () => {
     const { isOpen, onToggle } = useDisclosure()
     return (
         <Box 
-            w='100vw' 
+            w='100%' 
             bg={navBg}
             color='white' 
             as='nav'
             padding={0}
             margin={0}
+            position='fixed'
         >
             <Container
                 display="flex"
