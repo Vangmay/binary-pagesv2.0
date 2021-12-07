@@ -63,10 +63,13 @@ export const components = {
     
             },
             primaryLight:{
-                color:'black'
+                color:'#3e3e3e'
             },
-            heading:{
-                color:'white'
+            headingTitle:{
+                color:'white',
+                textDecoration:'underline',
+                textUnderlineOffset:2,
+                textDecorationThickness:3
             },
             pageTitle:{
                 color:'red'

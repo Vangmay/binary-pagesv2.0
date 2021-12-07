@@ -13,7 +13,14 @@ import {
     ScaleFade, 
     Slide, 
     SlideFade,
-    useDisclosure
+    useDisclosure,
+    Drawer,
+    DrawerBody,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton
 } from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
 import NextLink from 'next/link'
@@ -21,6 +28,7 @@ import { HamburgerIcon, CloseIcon} from '@chakra-ui/icons'
 import{ React,useState} from 'react'
 import { IoLogoGithub } from 'react-icons/io5'
 import { MoonIcon,SunIcon } from '@chakra-ui/icons'
+import { useRef } from 'react'
 
 export const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -33,7 +41,8 @@ export const Navbar = () => {
     const variantt = useColorModeValue('light','dark')
     const Home_bg = useColorModeValue('green.200','#2D3748')
     const Home_variant = useColorModeValue('home_light','home_dark')
-    const { isOpen, onToggle } = useDisclosure()
+    const btnRef = useRef()
+    const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <Box 
             w='100%' 
@@ -140,13 +149,10 @@ export const Navbar = () => {
                     display={iconDisplay}
                     bg={navBg}
                     color={colorScheme}
-                    onClick={()=>{
-                        changeDisplay('flex')
-                        changeIconDisplay('none')
-                        
-                    }}
+                    onClick={onOpen}
                     marginRight={2}
                     variant={variantt}
+                    ref={btnRef}
                 />
                 <IconButton
                     icon={colorMode=='light' ? <SunIcon/> : <MoonIcon/>}
@@ -154,69 +160,75 @@ export const Navbar = () => {
                     colorScheme='cyan'
                     aria-label='color mode switched'
                     onClick={toggleColorMode}
-                >
-                </IconButton>
+                />
                 {/* mobile nav -------------------------------------------------*/}
-            
-                <Container
-                    display={display}
-                    w='100vw'
-                    height='100vh'
+                <Drawer
+                    isOpen={isOpen}
+                    placement='left'
+                    onClose={onClose}
+                    finalFocusRef={btnRef}
                     bg={navBg}
                 >
-                    <Flex 
-                        justify="space-between" 
-                        w='full' 
-                        justifyContent="center" 
-                        align="center" 
-                        flexDirection='column'
-                        // display={['none','none','flex','flex']}
-                    >
+                    <DrawerOverlay/>
+                    <DrawerContent bg={navBg}>
+                        <DrawerFooter padding='12px'>
+                            <IconButton icon = {<CloseIcon/>} bg={navBg} onClick={onClose} variant={variantt} maxW='fit-content'/>
+                        </DrawerFooter>
+                        <DrawerBody >
+
+                                <Flex 
+                                    justify="space-between" 
+                                    w='full' 
+                                    h='full'
+                                    justifyContent="center" 
+                                    align="center" 
+                                    flexDirection='column'
+                                    // display={['none','none','flex','flex']}
+                                >
+                                        
+
+
+                                    
+
+                                    <NextLink href="/" passHref>
+                                        <Button as="a" color = {color} variant={variantt} aria-label="Home" my={5}  marginX={2} >
+                                        Home
+                                        </Button>
+                                    </NextLink>
+                                
+                                    <NextLink href="/about" passHref>
+                                        <Button as="a" color = {color}variant={variantt}  aria-label="About" my={5}  marginX={2} >
+                                        About
+                                        </Button>
+                                    </NextLink>
+                                    <NextLink href="/404" passHref>
+                                        <Button as="a" color = {color}variant={variantt} aria-label="About" my={5}  marginX={2} >
+                                            505
+                                        </Button>
+                                    </NextLink>
+                                    {/* <NextLink href="/about" passHref>
+                                        <Button as="a" color = {color}  colorScheme="teal" variant="ghost" aria-label="About" my={5}  marginX={2}>
+                                            Blogs
+                                        </Button>
+                                    </NextLink>
+                                */}
+                                
+                                    {/* <NextLink href="/contact" passHref>
+                                        <Button as="a" colorScheme="teal" variant='ghost' color = {color} aria-label="Contact" my={5} marginX={2} >
+                                        Contact
+                                        </Button>
+                                    </NextLink> */}
+                                </Flex>
+
+
                             
+                        </DrawerBody>
+                        <DrawerFooter >
+                                    <Text w='100%' textAlign='center' fontSize={{sm:'12px',md:'15px'}}>@2021 all right reserved</Text>
+                        </DrawerFooter>
+                    </DrawerContent>
 
-
-                        <IconButton
-                            icon = {<CloseIcon/>}
-                            
-                            bg={navBg}
-                            // display={['flex','flex','none','none']}
-                            onClick={()=>{
-                                changeDisplay('none')
-                                changeIconDisplay(['flex','flex','none','none'])
-                            }}
-                            variant={variantt}
-                        />
-
-                        <NextLink href="/" passHref>
-                            <Button as="a" color = {color} variant={variantt} aria-label="Home" my={5}  marginX={2} >
-                            Home
-                            </Button>
-                        </NextLink>
-                    
-                        <NextLink href="/about" passHref>
-                            <Button as="a" color = {color}variant={variantt}  aria-label="About" my={5}  marginX={2} >
-                            About
-                            </Button>
-                        </NextLink>
-                        <NextLink href="/404" passHref>
-                            <Button as="a" color = {color}variant={variantt} aria-label="About" my={5}  marginX={2} >
-                                505
-                            </Button>
-                        </NextLink>
-                        {/* <NextLink href="/about" passHref>
-                            <Button as="a" color = {color}  colorScheme="teal" variant="ghost" aria-label="About" my={5}  marginX={2}>
-                                Blogs
-                            </Button>
-                        </NextLink>
-                    */}
-                    
-                        {/* <NextLink href="/contact" passHref>
-                            <Button as="a" colorScheme="teal" variant='ghost' color = {color} aria-label="Contact" my={5} marginX={2} >
-                            Contact
-                            </Button>
-                        </NextLink> */}
-                    </Flex>
-                </Container>
+                </Drawer>
                 
             </Container>
         </Box>
