@@ -1,13 +1,16 @@
 import { useColorModeValue } from '@chakra-ui/color-mode'
 import { Img } from '@chakra-ui/image'
-import { Box, Container, HStack, Text } from '@chakra-ui/layout'
+import { Box, Container, HStack, Text, VStack } from '@chakra-ui/layout'
 import { textDecoration } from '@chakra-ui/styled-system'
 import { Heading } from '@chakra-ui/layout'
 import React from 'react'
 import { Spacer } from '@chakra-ui/layout'
 import { ImageBox } from './ImageBox'
+import NextLink from 'next/link'
 import { Headings } from '../text/headings'
-import { Paragraph, paragraph } from '../text/paragraph'
+import { Paragraph,Span } from '../text/paragraph'
+import {  SiPython,SiJavascript,SiHtml5,SiC,SiCplusplus, SiGithub} from 'react-icons/si'
+import { Button, IconButton } from '@chakra-ui/button'
 
 export const About = () => {
     const textDecor = useColorModeValue('gray.400','cyan.400')
@@ -16,8 +19,9 @@ export const About = () => {
     const secondaryTextColor = useColorModeValue('black','cyan.500')
     const bgColor = useColorModeValue('black','cyan.500')
     const variant = useColorModeValue('primaryLight','primaryDark')
+    const LinkVariant= useColorModeValue('socialLight','social')
     return (
-        <Container paddingTop='12px'>
+        <Container padding={{base:'12px', md:'10px',sm:'5px'}} >
             <Box 
                 borderRadius='lg'
                 mb={6}
@@ -30,7 +34,7 @@ export const About = () => {
             <Box display={{md:'flex'}}>
                 <Box flexGrow={1}>
                     <Heading variant={variant}>
-                        I am Vangmay Sachan
+                        Vangmay Sachan
                     </Heading>
                     <Headings>
                         Learner | Designer | Something else | 
@@ -65,6 +69,83 @@ export const About = () => {
                     Movies, Music, Computer science, Deep learning, maths
                     
                 </Paragraph>
+            </Box>
+
+            <Box paddingTop='20px'>
+                <Heading variant='headingTitle' 
+                        as='h4'
+                        textDecorationColor={useColorModeValue('orange.500','pink.500')}
+                        color={useColorModeValue('#3e3e3e','cyan.500')}
+                        textAlign='left'
+                        >Skills
+                </Heading>
+                <Paragraph>
+                    My favorite programming language is, no doubt <Span>python</Span> mainly because of the diverse cases I can us it in.
+                    I also enjoy working with <Span>Javascript</Span>, It is my go-to language for web development mainly because of the vast jungle of <Span color='red'> frameworks and libraries</Span> that it offers, 
+                    especially <Span>React and Next.js</Span> they are my most used frameworks. 
+                    <Spacer/>
+                    <IconButton icon={<SiPython/>} variant='tag' padding='5px' color='gray.400'bg='#121212' marginTop='3.2'marginRight='10px' /> 
+                    | █████████▒░ 85% |
+                    <Spacer/>
+                    <IconButton icon={<SiJavascript/>} variant='tag' padding='5px'color='gray.400' bg='#121212' marginTop='3.2'marginRight='10px' /> 
+                    | █████████▒░ 85% |
+                    <Spacer/>
+                    <IconButton icon={<SiHtml5/>} variant='tag' padding='5px'color='gray.400'bg='#121212' marginTop='3.2'marginRight='10px' /> 
+                    | █████████░ 90% |
+                    <Spacer/>
+                    <IconButton icon={<SiCplusplus/>} variant='tag' padding='5px'color='gray.400'bg='#121212' marginTop='3.2'marginRight='10px' /> 
+                    | ████░░░░░░ 40% |
+                    <Spacer/>
+                    <IconButton icon={<SiC/>} variant='tag' padding='5px'color='gray.400'bg='#121212' marginTop='3.2'marginRight='10px' /> 
+                    | █████▒░░░░░░ 45% |
+                </Paragraph>
+            </Box>
+
+            <Box paddingTop='20px'>
+                <Heading variant='headingTitle' 
+                        as='h4'
+                        textDecorationColor={useColorModeValue('orange.500','pink.500')}
+                        color={useColorModeValue('#3e3e3e','cyan.500')}
+                        textAlign='left'
+                        >Social:
+                </Heading>
+                <VStack align='left' paddingTop='12px'>
+                    <a href='https://github.com/Vangmay' target='_blank'>
+                        <Button rightIcon={<SiGithub/>} variant={LinkVariant}>
+                            GitHub
+                        </Button>
+                    </a>
+
+                    <a href='https://github.com/Vangmay' target='_blank'>
+                        <Button rightIcon={<SiGithub/>} variant={LinkVariant}>
+                            LinkedIn
+                        </Button>
+                    </a>
+
+                    <a href='https://github.com/Vangmay' target='_blank'>
+                        <Button rightIcon={<SiGithub/>}variant={LinkVariant}>
+                            Twitter
+                        </Button>
+                    </a>
+
+                    <a href='https://github.com/Vangmay' target='_blank'>
+                        <Button rightIcon={<SiGithub/>} variant={LinkVariant}>
+                            Reddit
+                        </Button>
+                    </a>
+
+                    <a href='https://github.com/Vangmay' target='_blank'>
+                        <Button rightIcon={<SiGithub/>} variant={LinkVariant}>
+                            Discord
+                        </Button>
+                    </a>
+
+                    <a href='https://github.com/Vangmay' target='_blank'>
+                        <Button rightIcon={<SiGithub/>} variant={LinkVariant}>
+                            Mail
+                        </Button>
+                    </a>
+                </VStack>
             </Box>
         </Container>
 

@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Red Hat Mono', monospace;
-  
+  overflow-x: hidden;
 }
 *{
   margin: 0px;
   box-sizing: border-box;
   padding: 0px;
+  font-family: 'Nunito', sans-serif;
 }
 a {
   color: inherit;
@@ -20,4 +21,7 @@ a {
   box-sizing: border-box;
 }
 ::selection{
+  color: #302d3f;
+  background-color:#121212;
+
 }

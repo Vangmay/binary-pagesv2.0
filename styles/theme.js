@@ -1,11 +1,26 @@
 import { extendTheme } from "@chakra-ui/react";
-import { mode } from "@chakra-ui/theme-tools";
+import { darken, mode } from "@chakra-ui/theme-tools";
 
 
 export const components = {
+    IconButton:{
+        baseStyle:{
+            fontFamily: 'Nunito'
+        },
+        sizes:{},
+        variants:{
+            tag:{
+                bg:'red.200',
+            }
+        },
+        defaultProps:{
+            
+        }
+    
+    },
     Button:{
         baseStyle:{
-
+            fontFamily: 'Nunito'
         },
         sizes:{},
         variants:{
@@ -34,6 +49,23 @@ export const components = {
                 _hover:{
                     color:'orange.500'
                 }
+            },
+            socialLight:{
+                bg:'pink.100',
+                color:'black',
+                transition:'0.2s all ease-in-out',
+                _hover:{
+                    bg:'pink.200'
+                }
+            },
+            social:{
+                bg:'blue.900',
+                color:'pink.300',
+                transition:'0.2s all ease-in-out',
+                _hover:{
+                    bg:'rgba(118,228,247,0.5)'
+                }
+                
             }
         },
         defaultProps:{
@@ -42,6 +74,7 @@ export const components = {
     },
     Heading:{
         baseStyle:{
+            fontFamily: 'Nunito'
         },
         sizes:{},
         variants:{
@@ -68,8 +101,8 @@ export const components = {
             headingTitle:{
                 color:'white',
                 textDecoration:'underline',
-                textUnderlineOffset:2,
-                textDecorationThickness:3
+                textUnderlineOffset:4,
+                textDecorationThickness:3.5,
             },
             pageTitle:{
                 color:'red'
@@ -77,7 +110,7 @@ export const components = {
             
         },
         defaultProps:{
-            fontFamily:'monospace'
+            fontFamily: 'Nunito'
         }
     
     }
