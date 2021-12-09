@@ -5,7 +5,6 @@ import React from 'react'
 export const ImageBox = () => {
     const text_variant = useColorModeValue('primary_light','primary')
     return (
-    <Container maxW={{base:'container.sm', md:'container.md'}}>
         <Box 
         w="100%" 
         h="50vh" 
@@ -45,6 +44,5 @@ export const ImageBox = () => {
                 
             </Box>
         </Box>
-    </Container> 
     )
 }

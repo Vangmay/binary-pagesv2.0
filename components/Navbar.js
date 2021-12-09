@@ -36,7 +36,7 @@ export const Navbar = () => {
     const [display,changeDisplay] = useState('none')
     const [iconDisplay,changeIconDisplay] = useState(['flex','flex','none','none'])
     const color = useColorModeValue('black','cyan.300')
-    const navBg = useColorModeValue('orange.100','gray.900')
+    const navBg = useColorModeValue('#FFFCDC','gray.900')
     const colorScheme = useColorModeValue("black","purple.400")
     const variantt = useColorModeValue('light','dark')
     const Home_bg = useColorModeValue('green.200','#2D3748')
@@ -108,14 +108,19 @@ export const Navbar = () => {
                         </Button>
                       </NextLink>
                 
-                    <NextLink href="/new" passHref>
+                    <NextLink href="/About" passHref>
                         <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2} >
-                        OiOI
+                        About
                         </Button>
                     </NextLink>
                     <NextLink href="/about" passHref>
                         <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2}>
-                            About
+                            Works
+                        </Button>
+                    </NextLink>
+                    <NextLink href="/about" passHref>
+                        <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2}>
+                            Blogs
                         </Button>
                     </NextLink>
                 
@@ -170,7 +175,7 @@ export const Navbar = () => {
                     bg={navBg}
                 >
                     <DrawerOverlay/>
-                    <DrawerContent bg={navBg}>
+                    <DrawerContent bg={navBg} >
                         <DrawerFooter padding='12px'>
                             <IconButton icon = {<CloseIcon/>} bg={navBg} onClick={onClose} variant={variantt} maxW='fit-content'/>
                         </DrawerFooter>
@@ -196,14 +201,19 @@ export const Navbar = () => {
                                         </Button>
                                     </NextLink>
                                 
-                                    <NextLink href="/about" passHref>
+                                    <NextLink href="/About" passHref>
                                         <Button as="a" color = {color}variant={variantt}  aria-label="About" my={5}  marginX={2} >
                                         About
                                         </Button>
                                     </NextLink>
-                                    <NextLink href="/404" passHref>
+                                    <NextLink href="/Works" passHref>
                                         <Button as="a" color = {color}variant={variantt} aria-label="About" my={5}  marginX={2} >
-                                            505
+                                            Works
+                                        </Button>
+                                    </NextLink>
+                                    <NextLink href="/Blogs" passHref>
+                                        <Button as="a" color = {color}variant={variantt} aria-label="About" my={5}  marginX={2} >
+                                            Blogs
                                         </Button>
                                     </NextLink>
                                     {/* <NextLink href="/about" passHref>
@@ -224,7 +234,7 @@ export const Navbar = () => {
                             
                         </DrawerBody>
                         <DrawerFooter >
-                                    <Text w='100%' textAlign='center' fontSize={{sm:'12px',md:'15px'}}>@2021 all right reserved</Text>
+                                    <Text w='100%' textAlign='center' fontSize={{sm:'12px',md:'15px'}}>&copy; {new Date().getFullYear()} Vangmay Sachan. All rights reserved</Text>
                         </DrawerFooter>
                     </DrawerContent>
 
