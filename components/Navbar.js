@@ -36,7 +36,8 @@ export const Navbar = () => {
     const [display,changeDisplay] = useState('none')
     const [iconDisplay,changeIconDisplay] = useState(['flex','flex','none','none'])
     const color = useColorModeValue('black','cyan.300')
-    const navBg = useColorModeValue('#FFFCDC','gray.900')
+    const navBg = useColorModeValue('rgba(255, 252, 220)','rgba(23, 25, 35,0.5)')
+    const MobnavBg = useColorModeValue('rgba(255, 252, 220)','rgba(23, 25, 35)')
     const colorScheme = useColorModeValue("black","purple.400")
     const variantt = useColorModeValue('light','dark')
     const Home_bg = useColorModeValue('green.200','#2D3748')
@@ -52,6 +53,9 @@ export const Navbar = () => {
             padding={0}
             margin={0}
             position='fixed'
+            transition='0.20s all ease-in-out'
+            zIndex={1200}
+            backdropFilter='blur(12px)'
         >
             <Container
                 display="flex"
@@ -102,23 +106,12 @@ export const Navbar = () => {
                     align="center" 
                     display={['none','none','flex','flex']}
                 >
-                      <NextLink href='/'>
-                        <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2} cursor='pointer'>
-                            Home
-                        </Button>
-                      </NextLink>
-                
-                    <NextLink href="/About" passHref>
-                        <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2} >
-                        About
-                        </Button>
-                    </NextLink>
-                    <NextLink href="/about" passHref>
+                    <NextLink href="/Works" passHref>
                         <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2}>
                             Works
                         </Button>
                     </NextLink>
-                    <NextLink href="/about" passHref>
+                    <NextLink href="/Blog" passHref>
                         <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2}>
                             Blogs
                         </Button>
@@ -172,12 +165,12 @@ export const Navbar = () => {
                     placement='left'
                     onClose={onClose}
                     finalFocusRef={btnRef}
-                    bg={navBg}
+                    bg={MobnavBg}
                 >
                     <DrawerOverlay/>
-                    <DrawerContent bg={navBg} >
+                    <DrawerContent bg={MobnavBg} >
                         <DrawerFooter padding='12px'>
-                            <IconButton icon = {<CloseIcon/>} bg={navBg} onClick={onClose} variant={variantt} maxW='fit-content'/>
+                            <IconButton icon = {<CloseIcon/>} bg={MobnavBg} onClick={onClose} variant={variantt} maxW='fit-content'/>
                         </DrawerFooter>
                         <DrawerBody >
 

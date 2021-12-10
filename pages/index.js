@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar'
 import styles from '../styles/Home.module.css'
 import { Box } from '@chakra-ui/layout'
 import { useColorModeValue } from '@chakra-ui/color-mode'
+import { Animation } from '../components/Layouts/animation'
 export default function Home() {
   return (
     <Box transition='0.20s all ease-in-out'bg={useColorModeValue('#FFFCDC','gray.900')}>
@@ -18,7 +19,9 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&display=swap" rel="stylesheet"/>
       </Head>
+      
       <MeetMe />
+
 
 
         

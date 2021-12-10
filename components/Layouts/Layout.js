@@ -5,16 +5,21 @@ import { Box } from '@chakra-ui/layout'
 import { Container, Spacer } from '@chakra-ui/react'
 import { Footer } from '../Footer'
 import { ImageBox } from '../misc/ImageBox'
+import { Animation } from './animation'
 
 
 function Layout({ children }) {
     return (
-        <Box as='div' h='100vh' w='100vw'>
+        <Box as='div' h='100vh' w='100vw' transition=''>
             <Navbar/>
             <ImageBox/>
-            {children}
+            <Animation>
+                {children}
+            </Animation>
+                
             <Footer/>
         </Box>
+
         
 
 

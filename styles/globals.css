@@ -25,3 +25,23 @@ a {
   background-color:#121212;
 
 }
+::-webkit-scrollbar{
+  width: 4px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #5d019b;
+  border-radius: 11px;
+  background-clip: content-box;
+  height: 10px;
+}
+
+::-webkit-scrollbar * {
+  background: transparent;
+  height: 2px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 3px;
+}
