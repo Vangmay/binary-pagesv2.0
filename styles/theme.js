@@ -124,6 +124,11 @@ const colors={
     danger: "#C34A36",
 }
 
+const config = {
+    initialColorMode:'dark',
+    useSystemColorMode:false
+}
+
 export const NewTheme = extendTheme({
-    components,colors
+    components,colors,config
 }); 

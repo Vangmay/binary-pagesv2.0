@@ -1,9 +1,24 @@
-import { Box, Container, Heading, useColorModeValue } from '@chakra-ui/react'
+import { 
+    Box, 
+    Container, 
+    Heading, 
+    useColorModeValue,
+    Grid,
+    GridItem,
+    HStack, 
+    VStack,
+    useColorMode
+    
+} from '@chakra-ui/react'
 import React from 'react'
 import { Paragraph } from '../components/text/paragraph'
-
+import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import { Link } from '@chakra-ui/react';
+import { useState } from 'react'
 export default function Works() {
     const bg= useColorModeValue('rgba(246, 173, 85,0.5)','rgba(13, 16, 33)')
+    const [selectedId, setSelectedId] = useState(null)
+    const title=useColorModeValue('light','dark')
     return (
         <>
         <Container>
@@ -19,24 +34,50 @@ export default function Works() {
                 Stuff i have done
             </Box> 
         </Container>
-        <Box h='100vh'>
-            <Box 
-                background='linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15449929971988796) 7%, rgba(0,0,0,1) 69%),
-                url("")'
-                minH={{base:'100%'}}
-                        
+        <VStack w='100%' h='100vh'>
+            <HStack
+                w='100%'
+                paddingLeft={{base:'25px',md:'30px',sm:'15px'}}
+                bg='rgba(0,0,0,0.4)'
+                justifyContent='space-between'
+                h='100%'
             >
-                <Heading as='h3' fontFamily='Inconsolata' margin='12px'>
-                    Sthaapna Website
-                </Heading>
-                <Paragraph>
-                    Sthaapna is a NGO run by humans, I am an intern there and the creator of their website. 
-                </Paragraph>
-                <Paragraph>
-                    It is my first proper internship and I love working with the people
-                </Paragraph>
-            </Box>
-        </Box>
+                <Box maxW='container.sm'>
+                    <Link href='youtube.com' target='blank'  >  
+                        <Heading textAlign='left' variant={title} transition='0.2s ease-in'>Sthaapna.org</Heading>
+                    </Link>
+                    <Paragraph >
+                        I Interned at Sthaapna, an Ngo working to empower the youth, where I made their entire website using HTML and CSS 
+                    </Paragraph>
+                </Box>
+                <Heading>3e</Heading>
+            </HStack>
+        </VStack>
+
+        <VStack w='100%' h='100vh'>
+            <HStack
+                w='100%'
+                paddingLeft={{base:'25px',md:'30px',sm:'15px'}}
+                bg='rgba(0,0,0,0.4)'
+                justifyContent='space-between'
+                h='100%'
+            >
+                <Box maxW='container.sm'>
+                    <Link href='youtube.com' target='blank'  >  
+                        <Heading textAlign='left' variant={title} transition='0.2s ease-in'>The_Bridge</Heading>
+                    </Link>
+                    <Paragraph >
+                        My school has a literary club and we release our own magazine by the name of "The bridge"
+                        We also have our own monthly newsletter.
+                        I am incharge of designing both of them and compiling all the content prepared by other members. 
+                        
+                    </Paragraph>
+                </Box>
+                <Heading>3e</Heading>
+            </HStack>
+        </VStack>
+       
         </>
     )
 }
+             
