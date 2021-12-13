@@ -15,6 +15,7 @@ import { Paragraph } from '../components/text/paragraph'
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import { Link } from '@chakra-ui/react';
 import { useState } from 'react'
+import { Magazine, magazine } from '../components/misc/magazine';
 export default function Works() {
     const bg= useColorModeValue('rgba(246, 173, 85,0.5)','rgba(13, 16, 33)')
     const [selectedId, setSelectedId] = useState(null)
@@ -62,7 +63,7 @@ export default function Works() {
                 justifyContent='space-between'
                 h='100%'
             >
-                <Box maxW='container.sm'>
+                <Box  w='100%'>
                     <Link href='youtube.com' target='blank'  >  
                         <Heading textAlign='left' variant={title} transition='0.2s ease-in'>The_Bridge</Heading>
                     </Link>
@@ -73,7 +74,7 @@ export default function Works() {
                         
                     </Paragraph>
                 </Box>
-                <Heading>3e</Heading>
+                <Magazine/>
             </HStack>
         </VStack>
        

@@ -45,3 +45,24 @@ a {
 ::-webkit-scrollbar-thumb:vertical {
   height: 3px;
 }
+.list{
+  background: red;
+  
+  list-style: none;
+  padding: 12px;
+  width:100%;
+  height: 100%;
+  margin: 12px;
+}
+.bg{
+  min-width: 120px;
+}
+.List-container{
+  margin: 12px;
+  min-width: 120px;
+
+}
+.Title{
+  color:white;
+  font-size:30px ;
+}
