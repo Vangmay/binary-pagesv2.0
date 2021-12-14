@@ -60,8 +60,9 @@ export default function Works() {
                 w='100%'
                 paddingLeft={{base:'25px',md:'30px',sm:'15px'}}
                 bg='rgba(0,0,0,0.4)'
-                justifyContent='space-between'
                 h='100%'
+                justifyContent='space-evenly'
+                flexDirection={{md:'row',base:'column',sm:'column'}}
             >
                 <Box  w='100%'>
                     <Link href='youtube.com' target='blank'  >  

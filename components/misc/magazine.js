@@ -3,28 +3,32 @@ import {
     Box, 
     VStack,
     Heading, 
-    Button
+    Button,
+    Link,
+    useColorModeValue,
+    Container,
+    useColorMode
 } from '@chakra-ui/react'
 import React from 'react'
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion'
 import { useState } from 'react'
-import Link from 'next/link'
+import { ArrowDownIcon } from '@chakra-ui/icons'
+import { Paragraph } from '../text/paragraph'
 
 
 export const Magazine = () => {
+    const container_bg = useColorModeValue('red','blue')
     return (
         <AnimateSharedLayout>
-            <Box w='100%' >
-
-                <motion.div layout initial={{borderRadius:50}} className='List-container'>
-                    <Item 
+            <Box w='50%' padding={{base:'12px',md:'15px',sm:'10px'}} >
+                <motion.div layout className='List-container'>
+                        <Item 
                         title='The Bridge #7'
-                        paragraph='hello'
-                    >
-                        
-                    </Item>
-                    
-                    <Item title='Cambridge Chronicles'/>
+                        paragraph='The is the first edition of the bridge that was designed by me, It was a tough task for me at first.
+                        Honestly,I did not even know weather I would be able to do it or not, But I was able to and everything went great.'
+                        href='https:www.youtube.com'/>
+                        <Item title='Cambridge Chronicles' paragraph='FIRST NEWSLETTER OF OUR SCHOOL' href='https:www.youtube.com'/>
+
                 </motion.div>
             </Box>
         </AnimateSharedLayout>
@@ -32,23 +36,32 @@ export const Magazine = () => {
     )
 }
 
+
 function Item(props,{children}){
     const [isOpen,setIsOpen] = useState(false);
-
+    const bg=useColorModeValue('#FEEBC8','#2A4365')
     const toggleOpen = () => setIsOpen(!isOpen);
-
+    const Heading_variant = useColorModeValue('light','dark')
     return(
-        <motion.li layout onClick={toggleOpen} initial={{borderRadius:10}} className='list'>
-            <motion.h1 layout className='Title'>{props.title}</motion.h1>
+        <motion.li layout onClick={toggleOpen} style={{backgroundColor:bg}} className='list'>
+                <motion.h1 layout className='Title' >
+                    <Heading variant={Heading_variant}>
+                        {props.title} 
+                        <ArrowDownIcon/>
 
-            <AnimatePresence>{isOpen && <Content paragraph = {props.paragraph}/>}</AnimatePresence>
-            {children}
+                    </Heading>
+                </motion.h1>
+
+                <AnimatePresence>{isOpen && <Content paragraph = {props.paragraph} href = {props.href}/>}</AnimatePresence>
+                
         </motion.li>
     )
 }
 
 
 function Content(props){
+    
+    const button_variant = useColorModeValue('socialLight','social')
     return (
         <motion.div
           layout
@@ -56,7 +69,10 @@ function Content(props){
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <p className='Paragraph'>{props.paragraph}</p>
+          <Paragraph className=''>{props.paragraph}</Paragraph>
+          <Link href={props.href} isExternal>
+            <Button variant={button_variant}>Have a look</Button>
+          </Link>
         </motion.div>
     );    
 }
