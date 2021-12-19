@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Paragraph = styled.p`
     text-align:justify;
-    text-indent:0.5em;
+    text-indent:0.2em;
     max-Width:'100%';
     padding:7px;
 `

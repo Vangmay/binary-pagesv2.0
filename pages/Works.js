@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 import { Paragraph } from '../components/text/paragraph'
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import { motion, AnimateSharedLayout, AnimatePresence, MotionConfig } from "framer-motion";
 import { Link } from '@chakra-ui/react';
 import { useState } from 'react'
 import { Magazine, magazine } from '../components/misc/magazine';
@@ -59,20 +59,27 @@ export default function Works() {
             <HStack
                 w='100%'
                 paddingLeft={{base:'25px',md:'30px',sm:'15px'}}
-                bg='rgba(0,0,0,0.4)'
+                background='linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15449929971988796) 7%, rgba(0,0,0,1) 69%),
+                            url("/Images/about-gif.gif")'
+
                 h='100%'
+                bgRepeat='no-repeat'
+                bgPosition='left'
+                bgSize='cover'
                 justifyContent='space-evenly'
                 flexDirection={{md:'row',base:'column',sm:'column'}}
             >
-                <Box  w='100%'>
+                
+                <Box  
+                    w='100%' 
+                >
                     <Link href='youtube.com' target='blank'  >  
                         <Heading textAlign='left' variant={title} transition='0.2s ease-in'>The_Bridge</Heading>
                     </Link>
                     <Paragraph >
                         My school has a literary club and we release our own magazine by the name of "The bridge"
                         We also have our own monthly newsletter.
-                        I am incharge of designing both of them and compiling all the content prepared by other members. 
-                        
+                        I am incharge of designing both,our magazine and our newsletter and compiling all the content prepared by other members. 
                     </Paragraph>
                 </Box>
                 <Magazine/>
@@ -82,4 +89,3 @@ export default function Works() {
         </>
     )
 }
-             

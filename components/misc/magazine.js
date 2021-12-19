@@ -20,7 +20,10 @@ export const Magazine = () => {
     const container_bg = useColorModeValue('red','blue')
     return (
         <AnimateSharedLayout>
-            <Box w='50%' padding={{base:'12px',md:'15px',sm:'10px'}} >
+            <Box w={{base:'100%',sm:'100%',md:'50%'}} 
+                padding={{base:'12px',md:'15px',sm:'10px'}} 
+                paddingLeft={0}
+            >
                 <motion.div layout className='List-container'>
                         <Item 
                         title='The Bridge #7'
@@ -44,6 +47,8 @@ function Item(props,{children}){
     const Heading_variant = useColorModeValue('light','dark')
     return(
         <motion.li layout onClick={toggleOpen} style={{backgroundColor:bg}} className='list'>
+            <Box w='full' h='full'>
+
                 <motion.h1 layout className='Title' >
                     <Heading variant={Heading_variant}>
                         {props.title} 
@@ -53,10 +58,11 @@ function Item(props,{children}){
                 </motion.h1>
 
                 <AnimatePresence>{isOpen && <Content paragraph = {props.paragraph} href = {props.href}/>}</AnimatePresence>
-                
+            </Box>
         </motion.li>
     )
 }
+                
 
 
 function Content(props){
