@@ -1,9 +1,11 @@
 import React from 'react'
 import { 
     Box,
+    Grid,
     Heading,
     Spacer,
-    useColorModeValue
+    useColorModeValue,
+    Container
 } from '@chakra-ui/react'
 import { Paragraph } from '../text/paragraph'
 import { BlogParagraph } from './BlogParagraph'
@@ -12,27 +14,45 @@ import { Footer } from '../Footer'
 import { BlogMenuItem } from './blogMenuItem'
 const BlogContent = () => {
     return (
-        <Box 
-            bg={useColorModeValue('#cfc9c2','#24283b')}
-            padding={{base:'10px',md:'10px',sm:'8px'}}
-            marginTop='12px'
-            borderRadius={20}
-            transition='0.2s all ease'
-            _hover={
-                {background:'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15449929971988796) 7%, rgba(0,0,0,1) 69%)'}
-            }
-        >
-            <BlogMenuItem
-                Title='neural networks'
-                Desc='desc'
-                href='/'
-            />
+        
+            <Grid 
+                gridTemplateColumns='repeat(3,1fr)'
+                gridTemplateRow='repeat(5,1fr)'
+                gridColumnGap={2}
+                gridRowGap={1.2}
+                h='100vh'
+            >
 
-            
-        </Box>
-    
-
+                <BlogMenuItem
+                    Title='hello'
+                    Desc='hello'
+                    gridArea='1/1/3/3'
+                    />
+                <BlogMenuItem
+                    Title='hello'
+                    Desc='hello'
+                    href='https://youtube.com'
+                    gridArea='1/3/5/4'
+                    />
+                <BlogMenuItem
+                    Title='hello'
+                    Desc='hello'
+                    href='https://youtube.com'
+                    gridArea='5/2/6/4'
+                />
+                <BlogMenuItem
+                    Title='hello'
+                    Desc='hello'
+                    href='https://youtube.com'
+                    gridArea='3/1/5/3'
+                />
+                <BlogMenuItem
+                    Title='hello'
+                    Desc='hello'
+                    href='https://youtube.com'
+                    gridArea='5/1/6/2'
+                />
+            </Grid>
     )
 }
-
 export default BlogContent

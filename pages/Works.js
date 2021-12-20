@@ -42,7 +42,7 @@ export default function Works() {
                 bg='rgba(0,0,0,0.4)'
                 justifyContent='space-between'
                 h='100%'
-            >
+                >
                 <Box maxW='container.sm'>
                     <Link href='youtube.com' target='blank'  >  
                         <Heading textAlign='left' variant={title} transition='0.2s ease-in'>Sthaapna.org</Heading>
@@ -59,12 +59,10 @@ export default function Works() {
             <HStack
                 w='100%'
                 paddingLeft={{base:'25px',md:'30px',sm:'15px'}}
-                background='linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15449929971988796) 7%, rgba(0,0,0,1) 69%),
-                            url("/Images/about-gif.gif")'
-
                 h='100%'
                 bgRepeat='no-repeat'
                 bgPosition='left'
+                bg='rgba(0,0,0,0.4)'
                 bgSize='cover'
                 justifyContent='space-evenly'
                 flexDirection={{md:'row',base:'column',sm:'column'}}
