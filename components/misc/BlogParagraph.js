@@ -3,7 +3,8 @@ import React from 'react'
 export const BlogParagraph = (props) => {
     const textColor = useColorModeValue('#24283b','#c0caf5')
     return (
-        <Box 
+        <Box
+            paddingTop={{base:"{3}", md:"{3}",sm:"{1.2}"}} 
         >
             <Heading
                 fontSize={{base:'30px',md:'30px',sm:'25px'}}
@@ -13,11 +14,12 @@ export const BlogParagraph = (props) => {
             </Heading>
             
             <Heading 
-                fontSize={{base:'20px',sm:'18px',md:'22px'}}
+                fontSize={{base:'18px',sm:'18px',md:'22px'}}
                 as='h3'
-                textAlign='justify'
+                textAlign='left'
                 color={textColor}
-                >
+
+            >
                 {props.content}
             </Heading>
         </Box>

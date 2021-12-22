@@ -1,8 +1,22 @@
-import { Link } from '@chakra-ui/react'
+import { 
+    Link,
+    useDisclosure,
+    Drawer,
+    DrawerBody,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    Button
+} from '@chakra-ui/react'
+import { useRef } from 'react'
 import React from 'react'
 import { Heading,Box,useColorModeValue } from '@chakra-ui/react'
 import { Paragraph } from '../text/paragraph'
 export const BlogMenuItem = (props) => {
+    const btnRef = useRef()
+    const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <Link href={props.href} 
             textDecor='none'
@@ -15,13 +29,9 @@ export const BlogMenuItem = (props) => {
             marginTop='12px'
             borderRadius={20}
             transition='0.2s all ease'
-            _hover={
-                {background:'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15449929971988796) 7%, rgba(0,0,0,1) 69%)'}
-            }
-            onClick={
-                "border:'none'"
-            }
             
+            onClick={onOpen}
+            ref={btnRef}
         >
         <Box 
         >
@@ -34,11 +44,26 @@ export const BlogMenuItem = (props) => {
                 >
                     {props.Title}
                 </Heading>
-                <Paragraph>
-                    {props.Desc}
-                </Paragraph>
+                <Drawer
+                    isOpen={isOpen}
+                    onClose={onClose}
+                    finalFocusRef={btnRef}
+                >   
+                    <DrawerContent 
+                     bg='red'
+                    >
+                        <Button
+                            onClick={onClose}                        
+                        >
+                            oi
+                        </Button>
+                    </DrawerContent>    
+                </Drawer>
         </Box>
         </Link>
 
     )
 }
+                
+               
+                

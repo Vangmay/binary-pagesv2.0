@@ -83,7 +83,7 @@ export const Navbar = () => {
                                 transition='0.13s ease-out'
                                 fontWeight='800'
                                 display={['none','flex','flex']}
-                                fontSize={[4,10,15,15]}
+                                fontSize={[15,10,15,15]}
                             >The binary pages</Text>
                             
 
