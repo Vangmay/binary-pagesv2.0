@@ -24,9 +24,12 @@ function BlogPage() {
 
     return(
         <>
-            <Container textAlign='center' minW='100vw' padding={0} 
+            <Container 
+                textAlign='center' 
+                minW='100vw' 
+                padding={0} 
                 backgroundImage='/Images/neural.png'
-                minH='50vh'
+                minH='75vh'
                 backgroundAttachment='fixed'
                 backgroundPosition='center'
                 backgroundRepeat='no-repeat'

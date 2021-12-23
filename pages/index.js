@@ -2,7 +2,7 @@ import { background } from '@chakra-ui/styled-system'
 import Head from 'next/head'
 import Image from 'next/image'
 import { About, MeetMe } from '../components/misc/about'
-import { ImageBox } from '../components/misc/ImageBox'
+import ImageBox from '../components/misc/ImageBox'
 import Navbar from '../components/Navbar'
 import styles from '../styles/Home.module.css'
 import { Box } from '@chakra-ui/layout'
@@ -14,7 +14,7 @@ export default function Home() {
     <Box transition='0.20s all ease-in-out'
       bg={useColorModeValue('#FFFCDC','gray.900')}
     >
-
+      <ImageBox/>
       <MeetMe />
 
 

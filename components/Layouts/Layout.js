@@ -8,6 +8,7 @@ import Head from 'next/head'
 import { ImageBox } from '../misc/ImageBox'
 import { Animation } from './animation'
 import {Helmet} from 'react-helmet'
+import { Cursor, cursor } from '../cursor'
 
 
 function Layout({ children }) {
@@ -15,6 +16,7 @@ function Layout({ children }) {
     const bg = useColorModeValue('#FFFCDC','gray.900')
     return (
         <>
+        <Cursor/>
         <Box as='main' transition='0.2s' >
             <Head>
                 <title>The_Binary_pagesV2.0</title>
@@ -26,7 +28,6 @@ function Layout({ children }) {
             </Head>
             <Helmet bodyAttributes={{style:`background-color:${bg}`}}/>
             <Navbar/>
-            <ImageBox/>
             <Box 
             
             >

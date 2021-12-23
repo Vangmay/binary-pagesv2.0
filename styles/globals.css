@@ -8,6 +8,10 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+html,
+body{
+  cursor: none;
+}
 *{
   margin: 0px;
   box-sizing: border-box;
@@ -66,6 +70,20 @@ a {
 .Title{
   color:white;
   font-size:30px ;
+}
+
+.cursor{
+  z-index: 10000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate3d(0,0,0);
+  position: fixed;
+  backdrop-filter: blur(1.2px) ;
+  background:rgb(33, 33, 33,0.5);
+  background-blend-mode: multiply;
 }
 @media screen and (max-width : 80em) { 
   .list{

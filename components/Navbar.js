@@ -36,7 +36,7 @@ export const Navbar = () => {
     const [display,changeDisplay] = useState('none')
     const [iconDisplay,changeIconDisplay] = useState(['flex','flex','none','none'])
     const color = useColorModeValue('black','cyan.300')
-    const navBg = useColorModeValue('rgba(255, 252, 220)','rgba(23, 25, 35,0.5)')
+    const navBg = useColorModeValue('rgba(255, 252, 220,0.5)','rgba(23, 25, 35,0.5)')
     const MobnavBg = useColorModeValue('rgba(255, 252, 220)','rgba(23, 25, 35)')
     const colorScheme = useColorModeValue("black","purple.400")
     const variantt = useColorModeValue('light','dark')
@@ -55,7 +55,7 @@ export const Navbar = () => {
             position='fixed'
             transition='0.20s all ease-in-out'
             zIndex={1200}
-            backdropFilter='blur(12px)'
+            backdropFilter='blur(4px) hue-rotate(20deg) saturate(20%) brightness(100%)'
         >
             <Container
                 display="flex"

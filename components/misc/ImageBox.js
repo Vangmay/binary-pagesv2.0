@@ -2,7 +2,7 @@ import { useColorModeValue } from '@chakra-ui/color-mode'
 import { Box, Container, HStack,Text } from '@chakra-ui/layout'
 import React from 'react'
 
-export const ImageBox = () => {
+const ImageBox = () => {
     const text_variant = useColorModeValue('primary_light','primary')
     return (
         <Box 
@@ -46,3 +46,4 @@ export const ImageBox = () => {
         </Box>
     )
 }
+export default ImageBox

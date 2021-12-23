@@ -16,12 +16,14 @@ import { motion, AnimateSharedLayout, AnimatePresence, MotionConfig } from "fram
 import { Link } from '@chakra-ui/react';
 import { useState } from 'react'
 import { Magazine, magazine } from '../components/misc/magazine';
+import ImageBox from '../components/misc/ImageBox'
 export default function Works() {
     const bg= useColorModeValue('rgba(246, 173, 85,0.5)','rgba(13, 16, 33)')
     const [selectedId, setSelectedId] = useState(null)
     const title=useColorModeValue('light','dark')
     return (
         <>
+        <ImageBox/>
         <Container>
             <Box 
                 borderRadius='lg'
