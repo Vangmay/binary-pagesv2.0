@@ -18,6 +18,8 @@ import { Paragraph } from '../text/paragraph'
 export const BlogMenuItem = (props) => {
     const btnRef = useRef()
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const [display,setDisplay] = useState("100%")
+    
     return (
         <Link href={props.href} 
             textDecor='none'
@@ -39,6 +41,7 @@ export const BlogMenuItem = (props) => {
 
                 <HStack h='100%'
                     flexDir={{base:"column",md:"row",sm:'column'}}
+                    
                 >
 
                     <Heading 
@@ -52,11 +55,13 @@ export const BlogMenuItem = (props) => {
                         {props.Title}
                     </Heading>
                     <Box 
+                        position='relative'
                         w='100%' 
                         justifyContent='right'
                         h='100%'
                         placeItems='center'
                         display='flex'
+                        transition='1.2s easeIn'
                     >
 
                         <Heading
@@ -65,7 +70,7 @@ export const BlogMenuItem = (props) => {
                             fontSize={{base:'20px',md:'18px',sm:'15px'}}
                             fontFamily='Inconsolata'
                             padding={{base:'9.5px',md:'10px',sm:'8px'}}
-                            
+                            color='#ededed'
                         >
                          {props.Desc}
                         </Heading>

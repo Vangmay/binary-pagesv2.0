@@ -10,6 +10,7 @@ import {
     Heading,
     useColorModeValue
 } from "@chakra-ui/react";
+import Content from '/components/misc/blogs/blogs.json'
 import { BlogParagraph } from "../../components/misc/BlogParagraph"
 import { BlogMenuItem } from "../../components/misc/blogMenuItem"
 import { BlogTag } from "../../components/misc/BlogTag"
@@ -18,11 +19,13 @@ import { BlogTag } from "../../components/misc/BlogTag"
 function BlogPage() {
     const router = useRouter()
     const BlogId = router.query.BlogId
-    const tag = ['tech']
-    const Title = ['tech']
-
-
+    const blog = Content[BlogId - 1]
+    console.log(Content[BlogId-1])
+    
+    const Title = ['yes']
+    const tag   = ['yp']
     return(
+        
         <>
             <Container 
                 textAlign='center' 
@@ -44,6 +47,7 @@ function BlogPage() {
                 padding={12}
                 paddingLeft={20}
                 aria-label ='meta'
+                backgroundAttachment='fixed'
             >
                 <Heading 
                     fontSize={{base:"50px",md:"40px",sm:'30px'}}
@@ -55,8 +59,15 @@ function BlogPage() {
                     fontFamily='Inconsolata'
                     color={useColorModeValue('#24283b','#c0caf5')}
                     letterSpacing={1}
-                >
+                    >
                     Vangmay_Sachan
+                </Heading>
+                <Heading
+                    fontSize='sm'
+                    padding={1.2}
+                    color={useColorModeValue('#24283b','#c0caf5')}
+                >
+                    09/06/2005
                 </Heading>
                 
 

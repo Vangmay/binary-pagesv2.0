@@ -55,7 +55,7 @@ export const Navbar = () => {
             position='fixed'
             transition='0.20s all ease-in-out'
             zIndex={1200}
-            backdropFilter='blur(4px) hue-rotate(20deg) saturate(20%) brightness(100%)'
+            backdropFilter='blur(2px) hue-rotate(20deg) saturate(20%)'
         >
             <Container
                 display="flex"
@@ -77,8 +77,7 @@ export const Navbar = () => {
                             variant={Home_variant}
                         >
                             <Text 
-                                cursor='pointer'
-                                fontFamily="Monospace" marginRight={3} 
+                                ontFamily="Monospace" marginRight={3} 
                                 letterSpacing='0px'
                                 transition='0.13s ease-out'
                                 fontWeight='800'
@@ -155,6 +154,7 @@ export const Navbar = () => {
                 <IconButton
                     icon={colorMode=='light' ? <SunIcon/> : <MoonIcon/>}
                     variant={variantt}
+                    cursor='none'
                     colorScheme='cyan'
                     aria-label='color mode switched'
                     onClick={toggleColorMode}

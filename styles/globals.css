@@ -9,7 +9,8 @@ body {
   overflow-x: hidden;
 }
 html,
-body{
+body,
+*{
   cursor: none;
 }
 *{
@@ -75,15 +76,15 @@ a {
 .cursor{
   z-index: 10000;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   pointer-events: none;
   overflow: hidden;
   transform: translate3d(0,0,0);
   position: fixed;
-  backdrop-filter: blur(1.2px) ;
-  background:rgb(33, 33, 33,0.5);
-  background-blend-mode: multiply;
+  backdrop-filter: blur(1.2px) saturate(200%) brightness(120%);
+  opacity: 0.8;
+  background-blend-mode:hard-light;
 }
 @media screen and (max-width : 80em) { 
   .list{
