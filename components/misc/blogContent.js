@@ -17,23 +17,7 @@ import { Footer } from '../Footer'
 import { BlogMenuItem } from './blogMenuItem'
 function BlogContent(){
     return(
-        <>
-            {   Content.map(blog => {
-                return(
-                    <Link
-                        href={blog.url}
-                    
-                    >
-                        <BlogMenuItem
-                            Title={blog.title}
-                            Desc={blog.desc}
-                            />
-                    </Link>
 
-                )
-            })}
-              
-        </>
     )
 }
-export default BlogContent
+export default BlogContent;

@@ -10,7 +10,6 @@ import {
     Heading,
     useColorModeValue
 } from "@chakra-ui/react";
-import Content from '/components/misc/blogs/blogs.json'
 import { BlogParagraph } from "../../components/misc/BlogParagraph"
 import { BlogMenuItem } from "../../components/misc/blogMenuItem"
 import { BlogTag } from "../../components/misc/BlogTag"
@@ -19,11 +18,8 @@ import { BlogTag } from "../../components/misc/BlogTag"
 function BlogPage() {
     const router = useRouter()
     const BlogId = router.query.BlogId
-    const blog = Content[BlogId - 1]
-    console.log(Content[BlogId-1])
-    
-    const Title = ['yes']
-    const tag   = ['yp']
+    const Title =  ['hey']
+    const tag   =  ['hey']
     return(
         
         <>

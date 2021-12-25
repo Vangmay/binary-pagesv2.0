@@ -26,6 +26,7 @@ export const Cursor = () => {
             position='fixed'
             zIndex='100000'
             border='1.2px solid'
+            display={{base:'flex',md:'flex',sm:'none'}}
             borderColor={Color}
             bg={bg}
             ref={cursorRef}>
