@@ -3,42 +3,44 @@ import {
     Box, 
     Grid,
     Container,
-    Link,
-    
 } from '@chakra-ui/react'
+import Link from 'next/link'
 import axios from 'axios'
 import { BlogMenuItem } from '../components/misc/blogMenuItem.js'
 import ImageBox from '../components/misc/ImageBox.js'
+import posts from './blogs/data.js'
 
-
-function Blog({posts}) {
+function Blog(props) {
     // const content = props.posts.data
     // console.log(content[0].attributes.title)
-    console.log(posts)
+    const blogPosts = props.postRes
+
     return (
         <>
             <ImageBox/>
 
-                <Box
-                    paddingLeft={12}
-                    paddingRight={12}
-                    marginBottom={4.5}
-                    >
-                    <Link
+            {blogPosts.map(blog=>{
+                return(
+                    <Box
+                        paddingLeft={12}
+                        paddingRight={12}
+                        marginBottom={4.5}
+                        >
+                        <Link
+                            href = '/blogs/[BlogId]'
+                            as={`/blogs/${blog.Id}`}
+                        >
+                            <a>
+                                <BlogMenuItem
+                                    Title={blog.Title}
+                                    Desc={blog.Desc}
+                                />
+                            </a>
+                        </Link>
+                    </Box>
 
->
-                        <BlogMenuItem
-                            // title={posts[0].title}
-                            
-                        />
-                    </Link>
-                </Box>
-
-
-
-
-
-            <h1>dshadisj</h1>
+                )
+            })}
         </>
     )
     
@@ -47,10 +49,22 @@ function Blog({posts}) {
 export default Blog
 
 export async function getStaticProps(){
-    const postsRes = await axios.get('http://localhost:1337/api/posts')
-    const posts = postsRes.data
-    return{props : {posts}}
+    const postRes = posts
+    return{
+        props:{
+            postRes
+        }
+    }
+
 } 
+
+                        
+                            
+                            
+
+
+
+
 
 // export async function getStaticPaths(){
 //     const postsRes = await fetch('http://localhost:1337/api/posts')

@@ -13,13 +13,17 @@ import {
 import { BlogParagraph } from "../../components/misc/BlogParagraph"
 import { BlogMenuItem } from "../../components/misc/blogMenuItem"
 import { BlogTag } from "../../components/misc/BlogTag"
+import axios from "axios"
+import fetch from "isomorphic-unfetch"
 
-
-function BlogPage() {
-    const router = useRouter()
-    const BlogId = router.query.BlogId
-    const Title =  ['hey']
-    const tag   =  ['hey']
+function BlogPage({posts}) {
+    const title = posts.title
+    const data = posts.date
+    const body = posts.body
+    const tagg = posts.tag
+    // console.log(posts)
+    const Title =  title
+    const tag   =  tagg
     return(
         
         <>
@@ -76,8 +80,10 @@ function BlogPage() {
                 padding={{base:"{0}",md:"{0}",sm:'{2}'}}
                 paddingBottom={5}
             >
-
                 <BlogParagraph
+                    content={body}
+                />
+                {/* <BlogParagraph
                     title='What is a cryptocurrency?'
                     content='
                     Okay so, cryptocurrencies are digital assets designed to work like a medium of exchange just like other currencies But the difference is that a crypto currency is usually decentralized meaning that it is not controlled by any government, individual or any regulating authority. 
@@ -133,7 +139,7 @@ function BlogPage() {
                     The answer is no where. 
                     
                     '
-                />
+                /> */}
             </Container>
 
         </>
@@ -142,4 +148,16 @@ function BlogPage() {
     
 export default BlogPage;
 
-
+export async function getServerSideProps(context){
+    const id = context.query.BlogId
+    // const idd = router.query.id
+    // console.log(idd)
+    const res = await fetch(`http://localhost:1337/api/posts/${id}`)
+    const {data} = await res.json()
+    const blogPosts = data.attributes
+    return{
+        props:{
+            posts:blogPosts
+        },
+    }
+}

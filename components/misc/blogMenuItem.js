@@ -21,17 +21,17 @@ export const BlogMenuItem = (props) => {
     const [display,setDisplay] = useState("100%")
     
     return (
-        <Link href={props.href} 
-            textDecor='none'
-            _hover={
-                {textDecoration:'none'}
-            }
-            gridArea={props.gridArea}
-            marginTop='12px'
-            borderRadius={20}
-            transition='0.2s all ease'
-            onClick={onOpen}
-            >
+        // <Link href={props.href} 
+        //     textDecor='none'
+        //     _hover={
+        //         {textDecoration:'none'}
+        //     }
+        //     gridArea={props.gridArea}
+        //     marginTop='12px'
+        //     borderRadius={20}
+        //     transition='0.2s all ease'
+        //     onClick={onOpen}
+        //     >
             <Box 
                 minH='250px'
                 padding={{base:'10px',md:'10px',sm:'8px'}}
@@ -78,7 +78,7 @@ export const BlogMenuItem = (props) => {
                 </HStack>
                     
             </Box>
-        </Link>
+        // </Link>
 
     )
 }
