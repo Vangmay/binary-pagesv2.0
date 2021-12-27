@@ -19,7 +19,7 @@ export const BlogMenuItem = (props) => {
     const btnRef = useRef()
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [display,setDisplay] = useState("100%")
-    
+    var gradient = ''
     return (
         // <Link href={props.href} 
         //     textDecor='none'
@@ -34,35 +34,61 @@ export const BlogMenuItem = (props) => {
         //     >
             <Box 
                 minH='250px'
-                padding={{base:'10px',md:'10px',sm:'8px'}}
-                bg='linear-gradient(90deg, rgba(33,33,33,0.5522584033613445) 0%, rgba(25,24,34,1) 28%, rgba(0,0,0,1) 100%);'
-                h='250px'
+                h='400px'
+                bg='rgba(33,33,33,0.4)'
+                backgroundImage='url("/Images/neural.png")'
+                boxShadow='-10px 12px rgba(21,21,21) '
+                border='2px dashed #3e3e3e'
+                transition='0.2s ease-Out'
+                _hover={
+                    {boxShadow:'-10px 12px 12px rgba(119, 119, 247)',borderRadius:'7px'}
+                }
+                borderRadius={15}
+                backgroundRepeat='no-repeat'
+                backgroundSize='cover'
+                backgroundPosition='center'
+                marginTop='12px'
+                w='1200px'
             >
+                {/* <Box 
+                    h='100%'
+                    w='100%'
+                    justifyContent='right'
+                    display='grid'
+                > */}
 
-                <HStack h='100%'
+                <HStack 
+                    h='100%'
                     flexDir={{base:"column",md:"row",sm:'column'}}
-                    
+                    display='flex'
+                    justifyContent='right'
                 >
 
-                    <Heading 
-                    as='h3'  
-                    fontFamily= 'Inconsolata' 
-                    fontSize={{base:'45px',md:'45px',sm:'35px'}}
-                    textAlign='left'
-                    w='100%'
-                    
-                    >
-                        {props.Title}
-                    </Heading>
                     <Box 
                         position='relative'
-                        w='100%' 
                         justifyContent='right'
                         h='100%'
                         placeItems='center'
-                        display='flex'
+                        
+                        maxW='50%'
+                        alignContent='center'
+                        textAlign='center'
                         transition='1.2s easeIn'
+                        // bg="rgba(33,33,33,0.5)"
+                        // bg={useColorModeValue("rgba(222, 222, 222,0.5)","rgba(33,33,33,0.5)")}
+
+                        bg='linear-gradient(90deg, rgba(33,33,33,0.5522584033613445) 0%, rgba(25,24,34,1) 28%, rgba(0,0,0,1) 100%);'
+                        padding={{base:'10px',md:'10px',sm:'8px'}}
+                        backdropFilter='blur(1.2px) contrast(1200px)'
                     >
+                        <Heading 
+                            as='h3'  
+                            fontFamily= 'Inconsolata' 
+                            fontSize={{base:'45px',md:'45px',sm:'35px'}}
+                            textAlign='right'
+                            >
+                            {props.Title}
+                        </Heading>
 
                         <Heading
                             as='h5'
@@ -70,18 +96,21 @@ export const BlogMenuItem = (props) => {
                             fontSize={{base:'20px',md:'18px',sm:'15px'}}
                             fontFamily='Inconsolata'
                             padding={{base:'9.5px',md:'10px',sm:'8px'}}
-                            color='#ededed'
+                            // color='#ededed'
+                            variant={useColorModeValue('primaryLight','primaryDark')}
+                            
                         >
-                         {props.Desc}
+                            {props.Desc}
                         </Heading>
                     </Box>
                 </HStack>
+                {/* </Box> */}
                     
             </Box>
         // </Link>
 
-    )
+)
 }
-                
+
                
                 

@@ -3,6 +3,8 @@ import {
     Box, 
     Grid,
     Container,
+    SimpleGrid,
+    GridItem
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import axios from 'axios'
@@ -18,29 +20,38 @@ function Blog(props) {
     return (
         <>
             <ImageBox/>
+            <Box
+                minH='100vh'
+            >
 
-            {blogPosts.map(blog=>{
-                return(
-                    <Box
-                        paddingLeft={12}
-                        paddingRight={12}
-                        marginBottom={4.5}
+                {blogPosts.map(blog=>{
+                    return(
+                        <>
+                        <Box
+                            paddingLeft={12}
+                            paddingRight={12}
+                            marginBottom={4.5}
+                            display='grid'
+                            justifyContent='center'
                         >
-                        <Link
+                            <Link
                             href = '/blogs/[BlogId]'
                             as={`/blogs/${blog.Id}`}
-                        >
-                            <a>
-                                <BlogMenuItem
-                                    Title={blog.Title}
-                                    Desc={blog.Desc}
-                                />
-                            </a>
-                        </Link>
-                    </Box>
-
+                            >
+                                    <a>
+                                        <BlogMenuItem
+                                            Image='/Images/carcar.gif'
+                                            Title={blog.Title}
+                                            Desc={blog.Desc}
+                                            />
+                                    </a>
+                            </Link>
+                        </Box>
+                        </>
                 )
             })}
+            </Box>
+
         </>
     )
     
@@ -56,36 +67,4 @@ export async function getStaticProps(){
         }
     }
 
-} 
-
-                        
-                            
-                            
-
-
-
-
-
-// export async function getStaticPaths(){
-//     const postsRes = await fetch('http://localhost:1337/api/posts')
-//     const data = await postsRes.json();
-
-//     const paths = data.map(blog => {
-//         return{
-//             params:{id:blog.id.toString()}
-//         }
-//     })
-//     return {
-//         paths,
-//         fallback:false
-//     }
-// }
-
-// export const getStaticProps = async(context)=>{
-//     const id = context.params.id;
-//     const res = await fetch('http://localhost:1337/api/posts/'+id)
-//     const data = await res.json()
-//     return{
-//         props:{blogPost: data}
-//     }
-// }
+}                                          
