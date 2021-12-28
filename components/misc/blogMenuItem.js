@@ -36,18 +36,18 @@ export const BlogMenuItem = (props) => {
                 minH='250px'
                 h='400px'
                 bg='rgba(33,33,33,0.4)'
-                backgroundImage='url("/Images/neural.png")'
-                boxShadow='-10px 12px rgba(21,21,21) '
-                border='2px dashed #3e3e3e'
+                backgroundImage={`url(${props.Image})`}
+                outline='2.5px dashed #3e3e3e'
+                outlineOffset='5px'
                 transition='0.2s ease-Out'
                 _hover={
-                    {boxShadow:'-10px 12px 12px rgba(119, 119, 247)',borderRadius:'7px'}
+                    {outlineOffset:'10px'}
                 }
                 borderRadius={15}
                 backgroundRepeat='no-repeat'
                 backgroundSize='cover'
                 backgroundPosition='center'
-                marginTop='12px'
+                marginTop='50px'
                 w='1200px'
             >
                 {/* <Box 

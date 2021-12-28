@@ -5,6 +5,7 @@ const posts = [
         "Hero":"/Images/caracar.gif",
         "Desc":"LoremLoremLoremLoremLoremLoremLorem",
         "href":'/blogs/1',
+        "Image":'/Images/carcar.gif',
         "Content":[
             {
                 "Heading":"Heading",
@@ -18,6 +19,7 @@ const posts = [
         "Hero":"/Images/caracar.gif",
         "Desc":"LupusLupusLupusLupusLupusLupusLupusLupus",
         "href":'/blogs/2',
+        "Image":'/Images/carcar.gif',
         "Content":[
             {
                 "Heading":"Heading2",

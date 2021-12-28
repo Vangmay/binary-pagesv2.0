@@ -40,7 +40,7 @@ function Blog(props) {
                             >
                                     <a>
                                         <BlogMenuItem
-                                            Image='/Images/carcar.gif'
+                                            Image={blog.Image}
                                             Title={blog.Title}
                                             Desc={blog.Desc}
                                             />
