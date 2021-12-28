@@ -8,9 +8,9 @@ export const BlogParagraph = (props) => {
         p: props => {
           const { children } = props;
           return (
-            <Text mb={2} fontSize={'12px'}>
+            <Heading mb={2} fontSize='12px'>
               {children}
-            </Text>
+            </Heading>
           );
         },
     };

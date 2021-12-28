@@ -118,7 +118,7 @@ export default function Works() {
                         <Heading textAlign='left' variant={title} transition='0.2s ease-in'>The_Bridge</Heading>
                     </Link>
                     <Paragraph >
-                        My school has a literary club and we release our own magazine by the name of "The bridge"
+                        My school has a literary club and we release our own magazine by the name of &quot;The bridge&quot;
                         We also have our own monthly newsletter.
                         I am incharge of designing both,our magazine and our newsletter and compiling all the content prepared by other members. 
                     </Paragraph>
