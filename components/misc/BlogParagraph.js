@@ -8,7 +8,7 @@ export const BlogParagraph = (props) => {
         p: props => {
           const { children } = props;
           return (
-            <Heading mb={2} fontSize='12px'>
+            <Heading mb={2} fontSize={{base:'18px',sm:'18px',md:'22px'}}>
               {children}
             </Heading>
           );
@@ -31,8 +31,7 @@ export const BlogParagraph = (props) => {
                 textAlign='left'
                 color={textColor}
             >
-                {props.content}
-                <ReactMarkdown components={ChakraUIRenderer(newTheme)} children={props.content} skipHtml />;
+                <ReactMarkdown components={ChakraUIRenderer(newTheme)} children={props.content} skipHtml />
             </Heading>
         </Box>
         

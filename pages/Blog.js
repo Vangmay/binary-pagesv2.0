@@ -10,13 +10,11 @@ import Link from 'next/link'
 import axios from 'axios'
 import { BlogMenuItem } from '../components/misc/blogMenuItem.js'
 import ImageBox from '../components/misc/ImageBox.js'
-import posts from './blogs/data.js'
+import fetch from 'isomorphic-unfetch'
 
-function Blog(props) {
+function Blog({posts}) {
     // const content = props.posts.data
     // console.log(content[0].attributes.title)
-    const blogPosts = props.postRes
-
     return (
         <>
             <ImageBox/>
@@ -24,7 +22,10 @@ function Blog(props) {
                 minH='100vh'
             >
 
-                {blogPosts.map(blog=>{
+                {posts.map(post=>{
+                    const id = post.id 
+                    const blog = post.attributes
+                    console.log(id)
                     return(
                         <>
                         <Box
@@ -36,14 +37,14 @@ function Blog(props) {
                         >
                             <Link
                             href = '/blogs/[BlogId]'
-                            as={`/blogs/${blog.Id}`}
+                            as={`/blogs/${id}`}
                             >
                                     <a>
                                         <BlogMenuItem
-                                            Image={blog.Image}
-                                            Title={blog.Title}
-                                            Desc={blog.Desc}
-                                            />
+                                            Image={blog.MenuImage}
+                                            Title={blog.title}
+                                            Desc={blog.desc}
+                                        />
                                     </a>
                             </Link>
                         </Box>
@@ -59,12 +60,30 @@ function Blog(props) {
 
 export default Blog
 
-export async function getStaticProps(){
-    const postRes = posts
+export async function getServerSideProps(){
+    // const idd = router.query.id
+    // console.log(idd)
+    const res = await fetch('http://localhost:1337/api/posts')
+    const {data} = await res.json()
+    const posts = data
+    // console.log(data)
+    // var posts = data.map(blog=>{
+    //     return(
+    //         blog.attributes.push(blog.id)
+    //     )
+    // })
     return{
         props:{
-            postRes
-        }
+            posts:posts
+        },
     }
+}
+// export async function getStaticProps(){
+//     const postRes = posts
+//     return{
+//         props:{
+//             postRes
+//         }
+//     }
 
-}                                          
+// }                                          

@@ -16,11 +16,12 @@ import { BlogTag } from "../../components/misc/BlogTag"
 import axios from "axios"
 import fetch from "isomorphic-unfetch"
 import MardkdownIt from "markdown-it"
+import ChakraUIRenderer from "chakra-ui-markdown-renderer"
 
 function BlogPage({posts}) {
     const md = new MardkdownIt();
     const title = posts.title
-    const data = posts.date
+    const date = posts.date
     const body = posts.body
     const tagg = posts.tag
     // console.log(posts)
@@ -70,7 +71,7 @@ function BlogPage({posts}) {
                     padding={1.2}
                     color={useColorModeValue('#24283b','#c0caf5')}
                 >
-                    09/06/2005
+                    {date}
                 </Heading>
                 
 
@@ -85,7 +86,7 @@ function BlogPage({posts}) {
             >
                 <section/>
                 <BlogParagraph
-                    content={MarkDown}
+                    content={body}
                 /> 
             </Container>
 
