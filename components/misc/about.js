@@ -8,7 +8,7 @@ import React from 'react'
 import { Spacer } from '@chakra-ui/layout'
 import { ImageBox } from './ImageBox'
 import NextLink from 'next/link'
-import { Headings } from '../text/headings'
+import {Headings} from '/components/text/Headings'
 import { Paragraph,Span } from '../text/paragraph'
 import {  SiPython,SiJavascript,SiHtml5,SiC,SiCplusplus, SiGithub,SiLinkedin, SiTwitter, SiDiscord, SiGmail} from 'react-icons/si'
 import { Button, IconButton } from '@chakra-ui/button'
@@ -21,6 +21,7 @@ export const MeetMe = () => {
     const bgColor = useColorModeValue('black','cyan.500')
     const variant = useColorModeValue('primaryLight','primaryDark')
     const LinkVariant= useColorModeValue('socialLight','social')
+    const theme = useColorModeValue('primaryLight','primaryDark')
     return (
         <Container padding={{base:'12px', md:'20px',sm:'15px'}} borderRadius='30px' >
             <Box 
@@ -37,9 +38,13 @@ export const MeetMe = () => {
                     <Heading variant={variant}>
                         Vangmay Sachan
                     </Heading>
-                    <Headings>
+                    <Heading
+                        fontSize={{base:'16px', md:'20px'}}
+                        variant={theme} 
+                        as='h2'
+                    >
                         Learner | Designer | Something else | 
-                    </Headings>
+                    </Heading>
                 </Box>
                
             </Box>
