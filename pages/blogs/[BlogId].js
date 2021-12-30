@@ -24,6 +24,7 @@ function BlogPage({posts}) {
     const date = posts.date
     const body = posts.body
     const tagg = posts.tag
+    const heroImage = posts.heroImage
     // console.log(posts)
     const Title =  title
     const tag   =  tagg
@@ -35,7 +36,7 @@ function BlogPage({posts}) {
                 textAlign='center' 
                 minW='100vw' 
                 padding={0} 
-                backgroundImage='/Images/neural.png'
+                backgroundImage={`${heroImage}`}
                 minH='75vh'
                 backgroundAttachment='fixed'
                 backgroundPosition='center'

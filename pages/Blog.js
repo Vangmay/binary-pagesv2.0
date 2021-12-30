@@ -41,7 +41,7 @@ function Blog({posts}) {
                             >
                                     <a>
                                         <BlogMenuItem
-                                            Image={blog.MenuImage}
+                                            Image={blog.menuImage}
                                             Title={blog.title}
                                             Desc={blog.desc}
                                         />

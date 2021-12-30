@@ -67,7 +67,8 @@ export default function Works() {
                 borderRadius={5}
             >
                 <Box  
-                    w='100%' 
+                    w='100%'
+                    paddingRight={{base:'10px'}}
                 >
                     <Link href='youtube.com' target='blank'  >  
                         <Heading textAlign='left' variant={title} transition='0.2s ease-in'>Sthaapna.org</Heading>
@@ -113,6 +114,7 @@ export default function Works() {
                 
                 <Box  
                     w='100%' 
+                    paddingRight={{base:'10px'}}
                 >
                     <Link href='youtube.com' target='blank'  >  
                         <Heading textAlign='left' variant={title} transition='0.2s ease-in'>The_Bridge</Heading>
@@ -140,7 +142,7 @@ export default function Works() {
                 width='100%'
                 color='#3e3e3e'
             >
-                Byte_Byte
+                2017
             </Heading>
             <HStack
                 w='100%'
@@ -150,7 +152,7 @@ export default function Works() {
                 bgPosition='left'
                 bg='rgba(0,0,0,0.4)'
                 bgSize='cover'
-                justifyContent='left'
+                justifyContent='space-evenly'
                 flexDirection={{md:'row',base:'column',sm:'column'}}
                 outline='1.2px dashed #3e3e3e'
                 outlineOffset='18px '
@@ -158,19 +160,22 @@ export default function Works() {
             >
                 
                 <Box  
-                    w='50%'
+                    w='100%' 
+                    paddingRight={{base:'10px'}}
                 >
                     <Link href='youtube.com' target='blank'  >  
-                        <Heading textAlign='left' variant={title} transition='0.2s ease-in'>Byte Club</Heading>
+                        <Heading textAlign='left' variant={title} transition='0.2s ease-in'>The_Bridge</Heading>
                     </Link>
-                    <Paragraph >
+                    <Paragraph>
                         I am the junior club leader of the Byte Club at our school which was founded by the students. 
                         I mainly conduct workshops, teaching young padwans about the basics of programming and beginner-friendly languages like HTML/CSS and also python.
                     </Paragraph>
                 </Box>
+                <Box w='100%'/>
             </HStack>
         </VStack>
-       
+
+        
         </>
     )
 }

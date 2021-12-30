@@ -48,7 +48,11 @@ export const BlogMenuItem = (props) => {
                 backgroundSize='cover'
                 backgroundPosition='center'
                 marginTop='50px'
-                w='1200px'
+                marginBottom='25px'
+                // marginLeft={{base:'12px',lg:'15px',md:'10px',sm:'8px'}}
+                w={{base:'conainer.sm',lg:'container.xl',md:'container.md',sm:'container.sm'}}
+                minW={{base:'conainer.sm',lg:'container.xl',md:'container.md',sm:'container.sm'}}
+                // w={{base:'400px',lg:'1200px',md:'1000px',sm:'400px'}}
             >
                 {/* <Box 
                     h='100%'
@@ -59,33 +63,32 @@ export const BlogMenuItem = (props) => {
 
                 <HStack 
                     h='100%'
-                    flexDir={{base:"column",md:"row",sm:'column'}}
+                    flexDir={{base:"row",md:"row",sm:'row'}}
                     display='flex'
                     justifyContent='right'
+                    w='100%'
                 >
-
                     <Box 
                         position='relative'
                         justifyContent='right'
                         h='100%'
                         placeItems='center'
-                        
-                        maxW='50%'
+                        maxW={{base:'100%',lg:'50%',md:'50%',lg:'50%',sm:'100%'}}
                         alignContent='center'
                         textAlign='center'
                         transition='1.2s easeIn'
                         // bg="rgba(33,33,33,0.5)"
                         // bg={useColorModeValue("rgba(222, 222, 222,0.5)","rgba(33,33,33,0.5)")}
-
-                        bg='linear-gradient(90deg, rgba(33,33,33,0.5522584033613445) 0%, rgba(25,24,34,1) 28%, rgba(0,0,0,1) 100%);'
+                        bg=' linear-gradient(90deg, rgba(33,33,33,0.5522584033613445) 0%, rgba(25,24,34,0.6446953781512605) 0%, rgba(18,17,24,0.4150035014005602) 57%, rgba(0,0,0,1) 100%);'
                         padding={{base:'10px',md:'10px',sm:'8px'}}
                         backdropFilter='blur(1.2px) contrast(1200px)'
                     >
                         <Heading 
                             as='h3'  
                             fontFamily= 'Inconsolata' 
-                            fontSize={{base:'45px',md:'45px',sm:'35px'}}
+                            fontSize={{base:'25px',lg:'40px',md:'30px'}}
                             textAlign='right'
+                            w='100%'    
                             >
                             {props.Title}
                         </Heading>
@@ -93,9 +96,10 @@ export const BlogMenuItem = (props) => {
                         <Heading
                             as='h5'
                             textAlign='right'
-                            fontSize={{base:'20px',md:'18px',sm:'15px'}}
+                            h='100%'
+                            fontSize={{base:'10px',lg:'18px',md:'15px',sm:'10px'}}
+                            
                             fontFamily='Inconsolata'
-                            padding={{base:'9.5px',md:'10px',sm:'8px'}}
                             // color='#ededed'
                             variant={useColorModeValue('primaryLight','primaryDark')}
                             
