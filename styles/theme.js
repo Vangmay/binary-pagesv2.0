@@ -34,7 +34,7 @@ export const components = {
             light:{
                 color:'black',
                 _hover:{
-                    color:'orange.500',
+                    color:'gray.300',
                     textDecoration:'underline'
                 }
             },
@@ -47,20 +47,20 @@ export const components = {
             home_light:{
                 color:'black',
                 _hover:{
-                    color:'orange.500'
+                    color:'#718096'
                 }
             },
             socialLight:{
-                bg:'pink.100',
+                bg:'#b4637a',
                 color:'black',
                 transition:'0.2s all ease-in-out',
                 _hover:{
-                    bg:'pink.200'
+                    bg:'#d7827e'
                 }
             },
             social:{
                 bg:'blue.900',
-                color:'pink.300',
+                color:'pink.400',
                 transition:'0.2s all ease-in-out',
                 _hover:{
                     bg:'rgba(118,228,247,0.5)'

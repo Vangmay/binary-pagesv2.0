@@ -17,7 +17,7 @@ export default function Home() {
   }
   return (
     <Box transition='0.20s all ease-in-out'
-      bg={useColorModeValue('#FFFCDC','gray.900')}
+      bg={useColorModeValue('rgba(242 232 222)','gray.900')}
     >
       <motion.div
         initial='hidden' 

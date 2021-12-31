@@ -28,14 +28,13 @@ export const Cursor = () => {
             position='fixed'
             zIndex='100000'
             border='3px dotted'
-            display={{base:'flex',md:'flex',sm:'none'}}
+            display={{base:'none',md:'flex',lg:'flex'}}
             borderColor={Color}
             bg={bg}
             // onMouseMove={
             //     {transfrom:`rotate(${rotation} + deg)`}
             // }
-            ref={cursorRef}>
-
-        </Box>
+            ref={cursorRef}
+        />
     )
 }

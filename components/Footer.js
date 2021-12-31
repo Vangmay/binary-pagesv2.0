@@ -4,7 +4,12 @@ import React from 'react'
 
 export const Footer = () => {
     return (    
-        <Box transition='0.20s all ease-in-out' alignContent='center' textAlign='center' bg={useColorModeValue('#FFFCDC','gray.900')}>
+        <Box 
+            transition='0.20s all ease-in-out' 
+            alignContent='center' 
+            textAlign='center' 
+            bg={useColorModeValue('rgba(242 232 222)','gray.900')}
+        >
             <Heading 
                 as='h6' 
                 fontSize='sm'

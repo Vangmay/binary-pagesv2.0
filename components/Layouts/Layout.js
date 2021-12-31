@@ -13,7 +13,7 @@ import { Cursor, cursor } from '../cursor'
 
 function Layout({ children }) {
     const scrollColor = useColorModeValue('red','blue')
-    const bg = useColorModeValue('#FFFCDC','gray.900')
+    const bg=useColorModeValue('rgba(242 232 222)','gray.900')
     return (
         <>
         <Cursor/>
