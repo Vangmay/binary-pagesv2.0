@@ -9,7 +9,7 @@ const ImageBox = () => {
         w="100%" 
         h="50vh" 
         background='linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15449929971988796) 7%, rgba(0,0,0,1) 69%),
-        url("/Images/about-gif.gif")'
+        url("/Images/About-gif.gif")'
         bgSize='cover'
         bgPosition='left'
         bgRepeat='no-repeat'
