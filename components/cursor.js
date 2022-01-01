@@ -18,16 +18,16 @@ export const Cursor = () => {
     return (
         <Box
             borderRadius='50%' 
-            height='40px'
-            width='40px'
+            height='30px'
+            width='30px'
             pointerEvents='none'
             transform = 'translate3d(0,0,0)'
             opacity='0.8'
-            mixBlendMode='exclusion'
+            // mixBlendMode='exclusion'
             backdropFilter='blur(1px) saturate(200%) brightness(120%)'
             position='fixed'
             zIndex='100000'
-            border='3px dotted'
+            border='2.5px dotted'
             display={{base:'none',md:'flex',lg:'flex'}}
             borderColor={Color}
             bg={bg}

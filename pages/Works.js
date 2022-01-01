@@ -18,7 +18,7 @@ import { useState } from 'react'
 import { Magazine, magazine } from '../components/misc/magazine';
 import ImageBox from '../components/misc/ImageBox'
 export default function Works() {
-    const bg= useColorModeValue('rgba(246, 173, 85,0.5)','rgba(13, 16, 33)')
+    const bg= useColorModeValue('rgba(196,166,232,0.5)','rgba(13, 16, 33)')
     const [selectedId, setSelectedId] = useState(null)
     const title=useColorModeValue('light','dark')
     return (
@@ -164,7 +164,7 @@ export default function Works() {
                     paddingRight={{base:'10px'}}
                 >
                     <Link href='youtube.com' target='blank'  >  
-                        <Heading textAlign='left' variant={title} transition='0.2s ease-in'>The_Bridge</Heading>
+                        <Heading textAlign='left' fontFamily='Inconsolata' variant={title} transition='0.2s ease-in'>Byte_Club</Heading>
                     </Link>
                     <Paragraph>
                         I am the junior club leader of the Byte Club at our school which was founded by the students. 

@@ -19,7 +19,8 @@ export const BlogMenuItem = (props) => {
     const btnRef = useRef()
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [display,setDisplay] = useState("100%")
-    var gradient = ''
+    const textColor = useColorModeValue('white','cyan.300')
+    const descColor = useColorModeValue('#eee9e6','#919191')
     return (
         // <Link href={props.href} 
         //     textDecor='none'
@@ -89,7 +90,8 @@ export const BlogMenuItem = (props) => {
                             fontSize={{base:'25px',lg:'40px',md:'30px'}}
                             textAlign='right'
                             w='100%'    
-                            >
+                            color={textColor}
+                        >
                             {props.Title}
                         </Heading>
 
@@ -102,7 +104,7 @@ export const BlogMenuItem = (props) => {
                             fontFamily='Inconsolata'
                             // color='#ededed'
                             variant={useColorModeValue('primaryLight','primaryDark')}
-                            
+                            color = {descColor}
                         >
                             {props.Desc}
                         </Heading>

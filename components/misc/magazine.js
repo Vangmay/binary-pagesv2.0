@@ -26,11 +26,16 @@ export const Magazine = () => {
             >
                 <motion.div layout className='List-container'>
                         <Item 
-                        title='The Bridge #7'
-                        paragraph='The is the first edition of the bridge that was designed by me, It was a tough task for me at first.
-                        Honestly,I did not even know weather I would be able to do it or not, But I was able to and everything went great.'
-                        href='https:www.youtube.com'/>
-                        <Item title='Cambridge Chronicles' paragraph='FIRST NEWSLETTER OF OUR SCHOOL' href='https:www.youtube.com'/>
+                            title='The Bridge #7'
+                            paragraph='The is the first edition of the bridge that was designed by me, It was a tough task for me at first.
+                            Honestly,I did not even know weather I would be able to do it or not, But I was able to and everything went great.'
+                            href='https:www.youtube.com'
+                        />
+                        <Item 
+                            title='Cambridge Chronicles' 
+                            paragraph='FIRST NEWSLETTER OF OUR SCHOOL' 
+                            href='https:www.youtube.com'
+                        />
 
                 </motion.div>
             </Box>
@@ -42,7 +47,7 @@ export const Magazine = () => {
 
 function Item(props,{children}){
     const [isOpen,setIsOpen] = useState(false);
-    const bg=useColorModeValue('#FEEBC8','#2A4365')
+    const bg= useColorModeValue("rgba(242,232,222,0.8)",'#2A4365')
     const toggleOpen = () => setIsOpen(!isOpen);
     const Heading_variant = useColorModeValue('light','dark')
     return(

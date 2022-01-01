@@ -40,7 +40,7 @@ export const Navbar = () => {
     const MobnavBg = useColorModeValue('rgba(242,232,222)','rgba(23, 25, 35)')
     const colorScheme = useColorModeValue("black","purple.400")
     const variantt = useColorModeValue('light','dark')
-    const Home_bg = useColorModeValue('teal.200','#2D3748')
+    const Home_bg = useColorModeValue('#eee9e6','#2D3748')
     const Home_variant = useColorModeValue('home_light','home_dark')
     const btnRef = useRef()
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -66,7 +66,6 @@ export const Navbar = () => {
                 alignItems="center"
                 justify="space-between"
                 w='full'
-
             >
 
                 <Flex align='center' w='full'>
