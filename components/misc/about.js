@@ -28,11 +28,19 @@ export const MeetMe = () => {
         show:{
             opacity:1,
             transition:{
-                staggerChildren:0.84
+                staggerChildren:0.15
             },
+        },
+        exit:{
+            opacity:0,
+            transition:{
+                transition:{
+                    staggerChildren:0.15
+                }
+            }
         }
     }
-    const itemm = {
+    const leftSlide = {
         hidden:{
             opacity:0,
             x:-50,
@@ -41,7 +49,34 @@ export const MeetMe = () => {
             opacity:1,
             x:0,
             transition:{
-                duration:0.8
+                duration:0.65
+            }
+        },
+        exit:{
+            opacity:0,
+            x:-50,
+            transition:{
+                duration:0.65
+            }
+        }
+    }
+    const rightSlide = {
+        hidden:{
+            opacity:0,
+            x:50
+        },
+        show:{
+            opacity:1,
+            x:0,
+            transition:{
+                duration:0.65
+            }
+        },
+        exit:{
+            opacity:0,
+            x:50,
+            transition:{
+                duration:0.65
             }
         }
     }
@@ -50,10 +85,11 @@ export const MeetMe = () => {
             variants={variants}
             initial = 'hidden'
             animate = 'show'
+            exit='exit'
 
         >
             <Container padding={{base:'12px', md:'20px',sm:'15px'}} borderRadius='30px' >
-                <motion.div     variants={itemm}>
+                <motion.div     variants={leftSlide}>
                     <Box 
                         borderRadius='lg'
                         mb={6}
@@ -64,7 +100,7 @@ export const MeetMe = () => {
                         Hello there 
                     </Box>   
                 </motion.div>
-                <motion.div variants = {itemm}>
+                <motion.div variants = {rightSlide}>
                     <Box display={{md:'flex'}}>
                         <Box flexGrow={1}>
                             <Heading variant={variant}>
@@ -80,7 +116,7 @@ export const MeetMe = () => {
                         </Box>
                     </Box>
                 </motion.div>
-                <motion.div variants = {itemm}>
+                <motion.div variants = {leftSlide}>
                     <Box paddingTop='20px'>
                         <Heading variant='headingTitle' 
                                 as='h4'
@@ -95,7 +131,7 @@ export const MeetMe = () => {
                         </Paragraph>
                     </Box>
                 </motion.div>
-                <motion.div variants = {itemm}>
+                <motion.div variants = {rightSlide}>
                     <Box paddingTop='20px'>
                         <Heading variant='headingTitle' 
                                 as='h4'
@@ -112,7 +148,7 @@ export const MeetMe = () => {
                         </Paragraph>
                     </Box>
                 </motion.div>
-                <motion.div variants={itemm}>
+                <motion.div variants={leftSlide}>
 
                     <Box paddingTop='20px'>
                         <Heading variant='headingTitle' 
@@ -146,17 +182,25 @@ export const MeetMe = () => {
                             | █████▒░░░░░░ 45% |
                     </Box>
                 </motion.div>
-                <motion.div variants={itemm}>
+                <motion.div variants={rightSlide}>
                     <Box paddingTop='20px'>
                         <Heading variant='headingTitle' 
                                 as='h4'
                                 textDecorationColor={useColorModeValue('orange.500','pink.500')}
                                 color={useColorModeValue('#3e3e3e','cyan.500')}
-                                textAlign='left'
+                                textAlign='right'
                                 >Social:
                         </Heading>
-                        <VStack align='left' paddingTop='12px'>
-                            <Link w='fit-content'_hover='none' href='https://github.com/Vangmay' target='_blank' cursor='none'>
+                        <VStack 
+                            align='right' 
+                            alignContent='right' 
+                            display='flex' 
+                            paddingTop='12px'
+                            placeContent='right'
+                            justifyContent='right'
+                            textAlign='right'
+                        >
+                            <Link w='100%' _hover='none' href='https://github.com/Vangmay' target='_blank' cursor='none'>
                                 <Button rightIcon={<SiGithub/>} variant={LinkVariant} cursor='none'>
                                     GitHub
                                 </Button>
@@ -168,7 +212,7 @@ export const MeetMe = () => {
                                 </Button>
                             </Link>
 
-                            <Link w='fit-content'_hover='none' href='https://twitter.com/VangmayS' target='_blank' cursor='none'>
+                            <Link w='100%' _hover='none' href='https://twitter.com/VangmayS' target='_blank' cursor='none'>
                                 <Button rightIcon={<SiTwitter/>}variant={LinkVariant} cursor='none'>
                                     Twitter
                                 </Button>
@@ -179,6 +223,11 @@ export const MeetMe = () => {
                                 </Button>
                             </Link>
 
+                            <Link _hover='none'href='mailto:vangmay.sachan16@gmail.com' target='_blank' w='100%' cursor='none'>
+                                <Button rightIcon={<SiGmail/>} variant={LinkVariant} cursor='none'>
+                                    Mail
+                                </Button>
+                            </Link>
                             <Link _hover='none'href='mailto:vangmay.sachan16@gmail.com' target='_blank' w='fit-content' cursor='none'>
                                 <Button rightIcon={<SiGmail/>} variant={LinkVariant} cursor='none'>
                                     Mail

@@ -117,15 +117,7 @@ export const Navbar = () => {
                 
                 
                     <NextLink href="/404" passHref>
-                        <Button 
-                            // _hover={
-                            //     {
-                            //         textDecoration:'underline',
-                                    
-                            //     }
-                                
-                            // }
-                            
+                        <Button         
                             transition="all 0.28.5s ease-in-out"
                             as="a" 
                             color={color}
@@ -182,45 +174,31 @@ export const Navbar = () => {
                                     flexDirection='column'
                                     // display={['none','none','flex','flex']}
                                 >
+                                <NextLink href="/Works" passHref>
+                                    <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2}>
+                                        Works
+                                    </Button>
+                                </NextLink>
+                                <NextLink href="/Blog" passHref>
+                                    <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2}>
+                                        Blogs
+                                    </Button>
+                                </NextLink>
+                                <NextLink href="/404" passHref>
+                                    <Button         
+                                        transition="all 0.28.5s ease-in-out"
+                                        as="a" 
+                                        color={color}
+                                        aria-label="Contact" 
+                                        my={5} 
+                                        marginX={2}
+                                        variant={variantt}
                                         
-
-
-                                    
-
-                                    <NextLink href="/" passHref>
-                                        <Button as="a" color = {color} variant={variantt} aria-label="Home" my={5}  marginX={2} >
-                                        Home
-                                        </Button>
-                                    </NextLink>
-                                
-                                    <NextLink href="/About" passHref>
-                                        <Button as="a" color = {color}variant={variantt}  aria-label="About" my={5}  marginX={2} >
-                                        About
-                                        </Button>
-                                    </NextLink>
-                                    <NextLink href="/Works" passHref>
-                                        <Button as="a" color = {color}variant={variantt} aria-label="About" my={5}  marginX={2} >
-                                            Works
-                                        </Button>
-                                    </NextLink>
-                                    <NextLink href="/Blogs" passHref>
-                                        <Button as="a" color = {color}variant={variantt} aria-label="About" my={5}  marginX={2} >
-                                            Blogs
-                                        </Button>
-                                    </NextLink>
-                                    {/* <NextLink href="/about" passHref>
-                                        <Button as="a" color = {color}  colorScheme="teal" variant="ghost" aria-label="About" my={5}  marginX={2}>
-                                            Blogs
-                                        </Button>
-                                    </NextLink>
-                                */}
-                                
-                                    {/* <NextLink href="/contact" passHref>
-                                        <Button as="a" colorScheme="teal" variant='ghost' color = {color} aria-label="Contact" my={5} marginX={2} >
-                                        Contact
-                                        </Button>
-                                    </NextLink> */}
-                                </Flex>
+                                    >
+                                        505
+                                    </Button>
+                                </NextLink>
+                            </Flex>
 
 
                             

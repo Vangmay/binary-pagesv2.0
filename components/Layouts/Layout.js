@@ -6,10 +6,9 @@ import { color, Container, Spacer, useColorModeValue } from '@chakra-ui/react'
 import { Footer } from '../Footer'
 import Head from 'next/head'
 import { ImageBox } from '../misc/ImageBox'
-import { Animation } from './animation'
 import {Helmet} from 'react-helmet'
 import { Cursor, cursor } from '../cursor'
-
+import { motion } from 'framer-motion'
 
 function Layout({ children }) {
     const scrollColor = useColorModeValue('red','blue')
@@ -25,10 +24,7 @@ function Layout({ children }) {
             </Head>
             <Helmet bodyAttributes={{style:`background-color:${bg}`}}/>
             <Navbar/>
-            <Box 
-            
-            >
-
+            <Box>
                 {children}
             </Box>
             <Footer/>
