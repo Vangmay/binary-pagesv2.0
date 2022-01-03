@@ -72,7 +72,7 @@ const rightSlide = {
 function Blog({posts}) {
     // const content = props.posts.data
     // console.log(content[0].attributes.title)
-    posts.reverse()
+    
     return (
         <>
             <ImageBox/>
@@ -135,6 +135,7 @@ export async function getServerSideProps(){
     const res = await fetch(url)
     const {data} = await res.json()
     const posts = data
+    console.log(posts)
     // console.log(data)
     // var posts = data.map(blog=>{
     //     return(
