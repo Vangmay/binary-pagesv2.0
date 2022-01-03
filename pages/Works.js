@@ -93,7 +93,7 @@ export default function Works() {
                         fontFamily='Inconsolata'
                         marginTop='12px'
                     >
-                        Stuff i have done
+                        _Works_
                     </Box> 
                 </motion.div>
             </Container>

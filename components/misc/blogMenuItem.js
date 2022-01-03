@@ -95,7 +95,7 @@ export const BlogMenuItem = (props) => {
                             <Heading
                                 as='h5'
                                 textAlign='right'
-                                h='100%'
+                                
                                 fontSize={{base:'10px',lg:'18px',md:'15px',sm:'10px'}}
                                 
                                 fontFamily='Inconsolata'

@@ -127,7 +127,7 @@ export const Navbar = () => {
                             variant={variantt}
                             
                         >
-                            505
+                            About
                         </Button>
                     </NextLink>
                 </Flex>
@@ -182,20 +182,6 @@ export const Navbar = () => {
                                 <NextLink href="/Blog" passHref>
                                     <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2}>
                                         Blogs
-                                    </Button>
-                                </NextLink>
-                                <NextLink href="/404" passHref>
-                                    <Button         
-                                        transition="all 0.28.5s ease-in-out"
-                                        as="a" 
-                                        color={color}
-                                        aria-label="Contact" 
-                                        my={5} 
-                                        marginX={2}
-                                        variant={variantt}
-                                        
-                                    >
-                                        505
                                     </Button>
                                 </NextLink>
                             </Flex>
