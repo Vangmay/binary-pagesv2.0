@@ -72,6 +72,7 @@ const rightSlide = {
 function Blog({posts}) {
     // const content = props.posts.data
     // console.log(content[0].attributes.title)
+    posts.reverse()
     return (
         <>
             <ImageBox/>
@@ -85,13 +86,9 @@ function Blog({posts}) {
                     const blog = post.attributes
                     console.log(id)
                     if (id % 2 == 0) {
-                        console.log('right')
                         var slide = rightSlide
-                        console.log("slide: ",slide)
                     } else {
-                        console.log('left')
                         var slide = leftSlide
-                        console.log("slide: ",slide)
                     }
                     return(
                         <>
@@ -134,7 +131,8 @@ export default Blog
 export async function getServerSideProps(){
     // const idd = router.query.id
     // console.log(idd)
-    const res = await fetch('http://localhost:1337/api/posts')
+    const url = process.env.API_URL
+    const res = await fetch(url)
     const {data} = await res.json()
     const posts = data
     // console.log(data)

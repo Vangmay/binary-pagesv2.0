@@ -101,7 +101,10 @@ export async function getServerSideProps(context){
     const id = context.query.BlogId
     // const idd = router.query.id
     // console.log(idd)
-    const res = await fetch(`http://localhost:1337/api/posts/${id}`)
+    const url = process.env.API_URL
+    // const res = await fetch(`http://localhost:1337/api/posts/${id}`)
+    const urrl = `${url}/${id}`
+    const res = await fetch(urrl)
     const {data} = await res.json()
     const blogPosts = data.attributes
     return{
