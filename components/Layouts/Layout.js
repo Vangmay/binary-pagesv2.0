@@ -1,14 +1,11 @@
 import React from 'react'
 import Navbar from '../Navbar'
-import { Image } from '@chakra-ui/image'
 import { Box } from '@chakra-ui/layout'
-import { color, Container, Spacer, useColorModeValue } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/react'
 import { Footer } from '../Footer'
 import Head from 'next/head'
-import { ImageBox } from '../misc/ImageBox'
 import {Helmet} from 'react-helmet'
-import { Cursor, cursor } from '../cursor'
-import { motion } from 'framer-motion'
+import { Cursor} from '../cursor'
 
 function Layout({ children }) {
     const scrollColor = useColorModeValue('red','blue')
