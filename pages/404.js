@@ -1,8 +1,5 @@
 import { Box, Heading } from '@chakra-ui/react'
 import React from 'react'
-import ImageBox from '../components/misc/ImageBox'
-import animation from '../components/misc/model'
-import Model from '../components/misc/model'
 
 const ImgBox = () => {
     return(

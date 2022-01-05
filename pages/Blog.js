@@ -1,13 +1,8 @@
 import React from 'react'
 import { 
-    Box, 
-    Grid,
-    Container,
-    SimpleGrid,
-    GridItem
+    Box
 } from '@chakra-ui/react'
 import Link from 'next/link'
-import axios from 'axios'
 import { BlogMenuItem } from '../components/misc/blogMenuItem.js'
 import ImageBox from '../components/misc/ImageBox.js'
 import fetch from 'isomorphic-unfetch'
@@ -129,31 +124,13 @@ function Blog({posts}) {
 export default Blog
 
 export async function getServerSideProps(){
-    // const idd = router.query.id
-    // console.log(idd)
     const url = process.env.API_URL
     const res = await fetch(url)
     const {data} = await res.json()
     const posts = data
-    console.log(posts)
-    // console.log(data)
-    // var posts = data.map(blog=>{
-    //     return(
-    //         blog.attributes.push(blog.id)
-    //     )
-    // })
     return{
         props:{
             posts:posts
         },
     }
 }
-// export async function getStaticProps(){
-//     const postRes = posts
-//     return{
-//         props:{
-//             postRes
-//         }
-//     }
-
-// }                                          

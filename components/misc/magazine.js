@@ -1,13 +1,9 @@
-import { 
-    background, 
+import {  
     Box, 
-    VStack,
     Heading, 
     Button,
     Link,
-    useColorModeValue,
-    Container,
-    useColorMode
+    useColorModeValue
 } from '@chakra-ui/react'
 import React from 'react'
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion'
@@ -17,7 +13,6 @@ import { Paragraph } from '../text/paragraph'
 
 
 export const Magazine = () => {
-    const container_bg = useColorModeValue('red','blue')
     return (
         <AnimateSharedLayout>
             <Box w={{base:'100%',sm:'100%',md:'50%'}} 

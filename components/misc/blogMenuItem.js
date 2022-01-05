@@ -1,24 +1,8 @@
-import { 
-    Link,
-    useDisclosure,
-    Drawer,
-    DrawerBody,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton,
-    Button,
-    HStack
-} from '@chakra-ui/react'
+import { useDisclosure,HStack} from '@chakra-ui/react'
 import { useRef,useState } from 'react'
 import React from 'react'
 import { Heading,Box,useColorModeValue } from '@chakra-ui/react'
-import { Paragraph } from '../text/paragraph'
 export const BlogMenuItem = (props) => {
-    const btnRef = useRef()
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const [display,setDisplay] = useState("100%")
     const textColor = useColorModeValue('white','cyan.300')
     const descColor = useColorModeValue('#eee9e6','#919191')
     return (
@@ -39,10 +23,8 @@ export const BlogMenuItem = (props) => {
                 backgroundPosition='center'
                 marginTop='50px'
                 marginBottom='25px'
-                // marginLeft={{base:'12px',lg:'15px',md:'10px',sm:'8px'}}
                 w={{base:'conainer.sm',lg:'container.xl',md:'container.md',sm:'container.sm'}}
                 minW={{base:'conainer.sm',lg:'container.xl',md:'container.md',sm:'container.sm'}}
-                // w={{base:'400px',lg:'1200px',md:'1000px',sm:'400px'}}
             >
                 <Box 
                     h='100%'
@@ -75,8 +57,6 @@ export const BlogMenuItem = (props) => {
                             alignContent='center'
                             textAlign='center'
                             transition='1.2s easeIn'
-                            // bg="rgba(33,33,33,0.5)"
-                            // bg={useColorModeValue("rgba(222, 222, 222,0.5)","rgba(33,33,33,0.5)")}
                             bg=' linear-gradient(90deg, rgba(33,33,33,0.5522584033613445) 0%, rgba(25,24,34,0.6446953781512605) 0%, rgba(18,17,24,0.4150035014005602) 57%, rgba(0,0,0,1) 100%);'
                             padding={{base:'10px',md:'10px',sm:'8px'}}
                             backdropFilter='blur(1.2px) contrast(1200px)'

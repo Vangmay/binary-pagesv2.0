@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box, Container, Heading, HStack,useColorModeValue } from '@chakra-ui/react'
-import model from './model'
 import Loader from './modelLoader'
 import dynamic from 'next/dynamic'
 

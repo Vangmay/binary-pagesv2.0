@@ -1,21 +1,13 @@
-import { useRouter } from "next/router"
-import ReactMarkdown from 'react-markdown'
 import React from 'react'
-import ReactDom from 'react-dom'
-import { 
-    Box,
-    Container, 
-    Img,
+import {
+    Container,
     Heading,
     useColorModeValue
 } from "@chakra-ui/react";
 import { BlogParagraph } from "../../components/misc/BlogParagraph"
-import { BlogMenuItem } from "../../components/misc/blogMenuItem"
 import { BlogTag } from "../../components/misc/BlogTag"
-import axios from "axios"
 import fetch from "isomorphic-unfetch"
 import MardkdownIt from "markdown-it"
-import ChakraUIRenderer from "chakra-ui-markdown-renderer"
 
 function BlogPage({posts}) {
     const md = new MardkdownIt();
@@ -98,10 +90,7 @@ export default BlogPage;
 
 export async function getServerSideProps(context){
     const id = context.query.BlogId
-    // const idd = router.query.id
-    // console.log(idd)
     const url = process.env.API_URL
-    // const res = await fetch(`http://localhost:1337/api/posts/${id}`)
     const urrl = `${url}/${id}`
     const res = await fetch(urrl)
     const {data} = await res.json()

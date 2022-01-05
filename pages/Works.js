@@ -3,23 +3,17 @@ import {
     Container, 
     Heading, 
     useColorModeValue,
-    Grid,
-    GridItem,
     HStack, 
-    VStack,
-    useColorMode
-    
+    VStack
 } from '@chakra-ui/react'
 import React from 'react'
 import { Paragraph } from '../components/text/paragraph'
-import { motion, AnimateSharedLayout, AnimatePresence, MotionConfig } from "framer-motion";
+import { motion} from "framer-motion";
 import { Link } from '@chakra-ui/react';
-import { useState } from 'react'
-import { Magazine, magazine } from '../components/misc/magazine';
+import { Magazine} from '../components/misc/magazine';
 import ImageBox from '../components/misc/ImageBox'
 export default function Works() {
     const bg= useColorModeValue('rgba(196,166,232,0.5)','rgba(13, 16, 33)')
-    const [selectedId, setSelectedId] = useState(null)
     const title=useColorModeValue('light','dark')
     const variants  = {
         hidden:{opacity:0},

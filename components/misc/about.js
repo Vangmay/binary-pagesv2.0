@@ -1,32 +1,16 @@
 import { useColorModeValue } from '@chakra-ui/color-mode'
-import { Img } from '@chakra-ui/image'
 import {Link} from '@chakra-ui/react'
-import { Box, Container, HStack, Text, VStack } from '@chakra-ui/layout'
-import { textDecoration } from '@chakra-ui/styled-system'
+import { Box, Container,VStack } from '@chakra-ui/layout'
 import { Heading } from '@chakra-ui/layout'
 import React from 'react'
 import { Spacer } from '@chakra-ui/layout'
-import { ImageBox } from './ImageBox'
-import NextLink from 'next/link'
-import { Paragraph,Span } from '../text/paragraph'
+import { Paragraph} from '../text/paragraph'
 import {  SiPython,SiJavascript,SiHtml5,SiC,SiCplusplus, SiGithub,SiLinkedin, SiTwitter, SiDiscord, SiGmail} from 'react-icons/si'
 import { Button, IconButton } from '@chakra-ui/button'
 import {motion} from 'framer-motion'
-import model from './model'
-import Loader from './modelLoader'
-import dynamic from 'next/dynamic'
-
-// const Modell = dynamic(()=>import('./model'),{
-//     ssr:false,
-//     loading:()=> <Loader/>
-// })
 
 export const MeetMe = () => {
-    const textDecor = useColorModeValue('gray.400','cyan.400')
     const bg= useColorModeValue('rgba(196,166,232,0.5)','rgba(13, 16, 33)')
-    const textColor = useColorModeValue('orange.500','pink.500')
-    const secondaryTextColor = useColorModeValue('black','cyan.500')
-    const bgColor = useColorModeValue('black','cyan.500')
     const variant = useColorModeValue('primaryLight','primaryDark')
     const LinkVariant= useColorModeValue('socialLight','social')
     const theme = useColorModeValue('primaryLight','primaryDark')
