@@ -8,6 +8,7 @@ import styles from '../styles/Home.module.css'
 import { Box } from '@chakra-ui/layout'
 import { useColorModeValue } from '@chakra-ui/color-mode'
 import { motion } from 'framer-motion'
+import Hero from '../components/misc/Hero'
 export default function Home() {
   const scrollColor=useColorModeValue('red','#212121')
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       bg={useColorModeValue('rgba(242 232 222)','gray.900')}
     > 
       <ImageBox/>
-      <MeetMe />
+      <Hero/>
     </Box>
   )
 }

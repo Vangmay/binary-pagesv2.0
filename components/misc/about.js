@@ -12,6 +12,14 @@ import { Paragraph,Span } from '../text/paragraph'
 import {  SiPython,SiJavascript,SiHtml5,SiC,SiCplusplus, SiGithub,SiLinkedin, SiTwitter, SiDiscord, SiGmail} from 'react-icons/si'
 import { Button, IconButton } from '@chakra-ui/button'
 import {motion} from 'framer-motion'
+import model from './model'
+import Loader from './modelLoader'
+import dynamic from 'next/dynamic'
+
+// const Modell = dynamic(()=>import('./model'),{
+//     ssr:false,
+//     loading:()=> <Loader/>
+// })
 
 export const MeetMe = () => {
     const textDecor = useColorModeValue('gray.400','cyan.400')

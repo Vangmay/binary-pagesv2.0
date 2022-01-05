@@ -116,7 +116,7 @@ export const Navbar = () => {
                     </NextLink>
                 
                 
-                    <NextLink href="/404" passHref>
+                    <NextLink href="/About" passHref>
                         <Button         
                             transition="all 0.28.5s ease-in-out"
                             as="a" 
@@ -174,6 +174,11 @@ export const Navbar = () => {
                                     flexDirection='column'
                                     // display={['none','none','flex','flex']}
                                 >
+                                <NextLink href="/About" passHref>
+                                    <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2}>
+                                        About
+                                    </Button>
+                                </NextLink>
                                 <NextLink href="/Works" passHref>
                                     <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2}>
                                         Works
