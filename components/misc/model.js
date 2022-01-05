@@ -5,7 +5,7 @@ import { loadGLTFModel } from './loadModel'
 import { modelSpinner,Container } from './modelLoader'
 
 const model = () => {
-    const refContainer = useRef()
+    const useContainer = useRef()
     const [loading,setLoading] = useState(true)
     const [renderer,setRenderer] = useState()
     const [camera,setCamera] = useState() 
@@ -21,7 +21,7 @@ const model = () => {
     const [_controls,setControls] = useState()
     
     const handleWindowResize = useCallback(()=>{
-        const { current: container } = refContainer
+        const { current: container } = useContainer
         if (container && renderer) {
           const scW = container.clientWidth
           const scH = container.clientHeight
@@ -31,7 +31,7 @@ const model = () => {
     },[renderer])
 
     useEffect(()=>{
-        const {current:container} = refContainer
+        const {current:container} = useContainer
         if (container && !renderer){
             const scW = container.clientWidth
             const scH = container.clientHeight
@@ -107,7 +107,7 @@ const model = () => {
     },[renderer,handleWindowResize])
 
     return(
-        <Container ref={refContainer}>{loading && <modelSpinner />}</Container>
+        <Container ref={useContainer}>{loading && <modelSpinner />}</Container>
     )
 
 }

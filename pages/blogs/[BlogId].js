@@ -2,7 +2,6 @@ import { useRouter } from "next/router"
 import ReactMarkdown from 'react-markdown'
 import React from 'react'
 import ReactDom from 'react-dom'
-import remarkGfm from 'remark-gfm'
 import { 
     Box,
     Container, 
