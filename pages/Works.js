@@ -5,13 +5,17 @@ import {
     useColorModeValue,
     HStack, 
     VStack,
-    Link
+    Link,
+    Center,
+    Img
 } from '@chakra-ui/react'
 import React from 'react'
 import { Paragraph } from '../components/text/paragraph'
 import { motion} from "framer-motion";
 import { Magazine} from '../components/misc/magazine';
 import ImageBox from '../components/misc/ImageBox'
+import dynamic from 'next/dynamic';
+import Loader from '../components/misc/modelLoader';
 export default function Works() {
     const bg= useColorModeValue('rgba(196,166,232,0.5)','rgba(13, 16, 33)')
     const title=useColorModeValue('light','dark')
@@ -133,7 +137,9 @@ export default function Works() {
                             I Interned at Sthaapna, an Ngo working to empower the youth, where I made their entire website using HTML and CSS 
                         </Paragraph>
                     </Box>
-                    <Heading>3e</Heading>
+                    <Center w='100%' h='100%'  textAlign='center' >
+                        <Img src='/Images/Mockupp.png' />
+                    </Center>
                 </HStack>
             </VStack>
             </motion.div>

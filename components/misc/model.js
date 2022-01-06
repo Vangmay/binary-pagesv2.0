@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from './loadModel'
-import { modelSpinner,Container } from './modelLoader'
+import { Container } from './modelLoader'
 
 const model = () => {
     const useContainer = useRef()
