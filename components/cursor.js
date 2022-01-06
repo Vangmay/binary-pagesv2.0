@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, transform, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import { Box, useColorModeValue } from '@chakra-ui/react'
 
 export const Cursor = () => {
     const cursorRef = React.useRef(null)

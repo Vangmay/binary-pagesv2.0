@@ -4,12 +4,12 @@ import {
     Heading, 
     useColorModeValue,
     HStack, 
-    VStack
+    VStack,
+    Link
 } from '@chakra-ui/react'
 import React from 'react'
 import { Paragraph } from '../components/text/paragraph'
 import { motion} from "framer-motion";
-import { Link } from '@chakra-ui/react';
 import { Magazine} from '../components/misc/magazine';
 import ImageBox from '../components/misc/ImageBox'
 export default function Works() {

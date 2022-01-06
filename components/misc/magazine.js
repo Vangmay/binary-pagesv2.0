@@ -5,9 +5,8 @@ import {
     Link,
     useColorModeValue
 } from '@chakra-ui/react'
-import React from 'react'
+import React,{useState} from 'react'
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion'
-import { useState } from 'react'
 import { ArrowDownIcon } from '@chakra-ui/icons'
 import { Paragraph } from '../text/paragraph'
 

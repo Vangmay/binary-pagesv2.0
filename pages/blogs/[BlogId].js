@@ -7,10 +7,8 @@ import {
 import { BlogParagraph } from "../../components/misc/BlogParagraph"
 import { BlogTag } from "../../components/misc/BlogTag"
 import fetch from "isomorphic-unfetch"
-import MardkdownIt from "markdown-it"
 
 function BlogPage({posts}) {
-    const md = new MardkdownIt();
     const title = posts.title
     const date = posts.date
     const body = posts.body
@@ -19,7 +17,6 @@ function BlogPage({posts}) {
     // console.log(posts)
     const Title =  title
     const tag   =  tagg
-    const MarkDown = md.render(body)
     return(
         
         <>

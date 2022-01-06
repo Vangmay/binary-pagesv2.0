@@ -2,38 +2,26 @@ import {
     useColorModeValue,
     Text,
     useColorMode,
-    Switch,
     Box,
     Flex,
     Button,
     Spacer,
     Container,
     IconButton,
-    Fade, 
-    ScaleFade, 
-    Slide, 
-    SlideFade,
     useDisclosure,
     Drawer,
     DrawerBody,
     DrawerFooter,
-    DrawerHeader,
     DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton
+    DrawerContent
 } from '@chakra-ui/react'
-import { extendTheme } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { HamburgerIcon, CloseIcon} from '@chakra-ui/icons'
-import{ React,useState} from 'react'
+import { HamburgerIcon, CloseIcon,MoonIcon,SunIcon} from '@chakra-ui/icons'
+import{ React,useState,useRef} from 'react'
 import { IoLogoGithub } from 'react-icons/io5'
-import { MoonIcon,SunIcon } from '@chakra-ui/icons'
-import { useRef } from 'react'
 
 export const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
-    const isDark = colorMode === 'dark'
-    const [display,changeDisplay] = useState('none')
     const [iconDisplay,changeIconDisplay] = useState(['flex','flex','none','none'])
     const color = useColorModeValue('black','cyan.300')
     const navBg = useColorModeValue('rgba(242 ,232 ,222,0.5)','rgba(23, 25, 35,0.5)')
@@ -125,7 +113,6 @@ export const Navbar = () => {
                             my={5} 
                             marginX={2}
                             variant={variantt}
-                            
                         >
                             About
                         </Button>

@@ -1,6 +1,4 @@
 import { extendTheme } from "@chakra-ui/react";
-import { darken, mode } from "@chakra-ui/theme-tools";
-
 
 export const components = {
     IconButton:{
