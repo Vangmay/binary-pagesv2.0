@@ -116,7 +116,9 @@ export const MeetMe = () => {
                         >WhoAmI?
                         </Heading>
                         <Paragraph>
-                            I am a 16 year old OF TOTALLY NORMAL HEIGHT. Currently I am panicking about my AS/A levels.
+                            I am a 16 year old OF TOTALLY NORMAL HEIGHT. Currently I am panicking about my AS/A levels,However i don't let that stop my from following the things that i am interested in. 
+                            I enjoy writing code, I usually do things in python but these days its Javascript. I usually challange myself, by taking up tasks that I CANT THINK I DO, but somehow end up doing that.
+                            I also like designing and trying out new things in it, Recently i have been making voxel art(It's bad)
                         </Paragraph>
                     </Box>
                 </motion.div>
