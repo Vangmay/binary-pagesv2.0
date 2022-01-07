@@ -14,7 +14,6 @@ export const Cursor = () => {
     },[])
     const Color = useColorModeValue('#ededed','#ededed')
     const bg = useColorModeValue('rbga(20, 20, 20,0.8)','rbga(242, 242, 242,0.3)')
-    var rotation = 1
     return (
         <Box
             borderRadius='50%' 

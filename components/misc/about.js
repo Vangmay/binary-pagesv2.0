@@ -78,7 +78,7 @@ export const MeetMe = () => {
             exit='exit'
 
         >
-            <Container padding={{base:'12px', md:'20px',sm:'15px'}} borderRadius='30px' >
+            <Container padding={{base:'12px', md:'20px',sm:'15px'}} borderRadius='30px' transition='0.2s'>
                 <motion.div     variants={leftSlide}>
                     <Box 
                         borderRadius='lg'
@@ -115,9 +115,8 @@ export const MeetMe = () => {
                                 paddingBottom='15px'
                         >WhoAmI?
                         </Heading>
-                        <Paragraph>I am a 16 year old OF TOTALLY NORMAL HEIGHT. Currently on my path to give my AS/A levels. 
-                                    I have a love of trying out new things.
-                                        
+                        <Paragraph>
+                            I am a 16 year old OF TOTALLY NORMAL HEIGHT. Currently I am panicking about my AS/A levels.
                         </Paragraph>
                     </Box>
                 </motion.div>
@@ -133,8 +132,11 @@ export const MeetMe = () => {
                                 >I &lt;3
                         </Heading>
                         <Paragraph>
-                            Movies, Music, Computer science, Deep learning, maths
-                            
+                            Movies, 
+                            Music, 
+                            Computer science, 
+                            Deep learning, 
+                            Maths
                         </Paragraph>
                     </Box>
                 </motion.div>

@@ -5,7 +5,7 @@ import React from 'react'
 export const Footer = () => {
     return (    
         <Box 
-            transition='0.20s all ease-in-out' 
+            transition='0.20s ' 
             alignContent='center' 
             textAlign='center' 
             bg={useColorModeValue('rgba(242 232 222)','gray.900')}

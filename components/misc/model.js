@@ -59,7 +59,7 @@ const model = () => {
             controls.target = target 
             setControls(target)
 
-            loadGLTFModel(scene,'/Hamster_01.gltf',{ //Do stuff here
+            loadGLTFModel(scene,'/mainmain.gltf',{ //Do stuff here
                 receiveShadow:false,
                 castShadow:false,
             }).then(()=>{
@@ -74,20 +74,6 @@ const model = () => {
 
                 frame = frame <= 100 ? frame + 1 : frame 
 
-                if(frame <= 100){
-                    const p = initialCameraPosition 
-                    const rotSpeed = 0.2 
-                    // -easeOutCirc(frame/120) * Math.PI * 20 
-
-                    camera.position.y = 10 
-                    camera.position.x = 
-                        p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
-                    camera.position.z =
-                        p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed)
-                    camera.lookAt(target)
-                } else {
-                    controls.update()
-                }
                 renderer.render(scene,camera)
             }
 

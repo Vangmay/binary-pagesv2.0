@@ -116,7 +116,7 @@ export default function Works() {
                     h='100%'
                     bgRepeat='no-repeat'
                     bgPosition='left'
-                    bg='rgba(0,0,0,0.4)'
+                    bg='rgba(0,0,0,0.3)'
                     bgSize='cover'
                     justifyContent='space-evenly'
                     flexDirection={{md:'row',base:'column',sm:'column'}}
@@ -130,9 +130,9 @@ export default function Works() {
                     >
                         <Heading textAlign='left' variant={title} transition='0.2s ease-in'>Sthaapna.org</Heading>
                         <Paragraph >
-                            I Interned at Sthaapna, an Ngo that works to empower the youth they conduct quizzes and events in various colleges about our Indian history, 
+                            I Intern at Sthaapna, an Ngo that works to empower the youth they conduct quizzes and events in various colleges about our Indian history, 
                             where I made their entire website using HTML and CSS. 
-                            The website is not released as of now, I will put it at as soon as it gets released.  
+                            The website is not released as of now, I will put a link to it as soon as it gets released.  
                         </Paragraph>
                     </Box>
                     <Center w='100%' h='100%'  textAlign='center' >
@@ -163,7 +163,7 @@ export default function Works() {
                     h='100%'
                     bgRepeat='no-repeat'
                     bgPosition='left'
-                    bg='rgba(0,0,0,0.4)'
+                    bg='rgba(0,0,0,0.3)'
                     bgSize='cover'
                     justifyContent='space-evenly'
                     flexDirection={{md:'row',base:'column',sm:'column'}}
@@ -211,7 +211,7 @@ export default function Works() {
                     h='100%'
                     bgRepeat='no-repeat'
                     bgPosition='left'
-                    bg='rgba(0,0,0,0.4)'
+                    bg='rgba(0,0,0,0.3)'
                     bgSize='cover'
                     justifyContent='space-evenly'
                     flexDirection={{md:'row',base:'column',sm:'column'}}
@@ -224,9 +224,8 @@ export default function Works() {
                         w='100%' 
                         paddingRight={{base:'10px'}}
                     >
-                        <Link href='youtube.com' target='blank'  >  
-                            <Heading textAlign='left' fontFamily='Inconsolata' variant={title} transition='0.2s ease-in'>Byte_Club</Heading>
-                        </Link>
+                        <Heading textAlign='left' fontFamily='Inconsolata' variant={title} transition='0.2s ease-in'>Byte_Club</Heading>
+                        
                         <Paragraph>
                             I am the junior club leader of the Byte Club at our school which was founded by the students. 
                             I mainly conduct workshops, teaching young padwans about the basics of programming and beginner-friendly languages.

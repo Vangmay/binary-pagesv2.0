@@ -96,17 +96,17 @@ const Hero = () => {
                                     mt={5}
                                     alignContent='left'
                                     >
-                                    Welcome to the binary pages 
+                                    Hello! I am Vangmay
                                 </Box>
                                 <Heading variant={variant}> 
-                                    Hello! I am Vangmay
+                                    Welcome to the binary pages 
                                 </Heading>
                                 <Heading
                                     fontSize={{base:'14px', md:'18px'}}
                                     variant={theme} 
                                     as='h2'
                                     >
-                                    And I love trying out new things.                        
+                                    A site that renders my interests and hobbies                        
                                 </Heading>
                             </motion.div>
 

@@ -18,7 +18,7 @@ import {
 import NextLink from 'next/link'
 import { HamburgerIcon, CloseIcon,MoonIcon,SunIcon} from '@chakra-ui/icons'
 import{ React,useState,useRef} from 'react'
-import { IoLogoGithub } from 'react-icons/io5'
+import { IoLogoGithub,IoHome } from 'react-icons/io5'
 
 export const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -57,19 +57,22 @@ export const Navbar = () => {
             >
 
                 <Flex align='center' w='full'>
-                    <NextLink href='/' passHref>
+                    <NextLink href='/' passHref cursor='none'>
                         <Button    
-                            leftIcon={<SunIcon/>}
+                            leftIcon={<IoHome/>}
                             background={Home_bg}
                             variant={Home_variant}
+                            cursor='none'
+                            padding='none'
                         >
                             <Text 
                                 ontFamily="Monospace" marginRight={3} 
                                 letterSpacing='0px'
                                 transition='0.13s ease-out'
                                 fontWeight='800'
-                                display={['none','flex','flex']}
-                                fontSize={[15,10,15,15]}
+                                display={{base:'none',md:'flex',lg:'flex'}}
+                                fontSize={{base:'0', md:'15',lg:'15'}}
+                                cursor='none'
                             >The binary pages</Text>
                             
 

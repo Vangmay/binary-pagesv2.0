@@ -24,8 +24,8 @@ a {
   box-sizing: border-box;
 }
 ::selection{
-  color: #302d3f;
-  background-color:#121212;
+  color: #747474;
+  background-color:#1d1d1d;
 
 }
 ::-webkit-scrollbar{
