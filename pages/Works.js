@@ -99,6 +99,7 @@ export default function Works() {
                 w='100%' 
                 h='100vh'
                 padding={{base:'12px',md:'48px',sm:'8px'}}
+                
             >
                 <Heading 
                     fontSize='sm'
@@ -125,17 +126,21 @@ export default function Works() {
                     borderRadius={5}
                 >
                     <Box  
-                        w='100%'
+                        w='100%' 
                         paddingRight={{base:'10px'}}
+                        textAlign='center'
                     >
-                        <Heading textAlign='left' variant={title} transition='0.2s ease-in'>Sthaapna.org</Heading>
+                        
+                        <Heading textAlign='left' fontFamily='Inconsolata' variant={title} transition='0.2s ease-in'>Byte_Club</Heading>
+                        
                         <Paragraph >
                             I Intern at Sthaapna, an Ngo that works to empower the youth they conduct quizzes and events in various colleges about our Indian history, 
                             where I made their entire website using HTML and CSS. 
                             The website is not released as of now, I will put a link to it as soon as it gets released.  
                         </Paragraph>
+                        
                     </Box>
-                    <Center w='100%' h='100%'  textAlign='center' >
+                    <Center w='100%'   textAlign='center' >
                         <Img src='/Images/Mockupp.png' />
                     </Center>
                 </HStack>
