@@ -92,24 +92,12 @@ export const Navbar = () => {
                     align="center" 
                     display={['none','none','flex','flex']}
                 >
-                    <NextLink href="/Works" passHref>
-                        <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2}>
-                            Works
-                        </Button>
-                    </NextLink>
-                    <NextLink href="/Blog" passHref>
-                        <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2}>
-                            Blogs
-                        </Button>
-                    </NextLink>
-                
-                
                     <NextLink href="/About" passHref>
                         <Button         
                             transition="all 0.28.5s ease-in-out"
                             as="a" 
                             color={color}
-                            aria-label="Contact" 
+                            aria-label="About" 
                             my={5} 
                             marginX={2}
                             variant={variantt}
@@ -117,6 +105,18 @@ export const Navbar = () => {
                             About
                         </Button>
                     </NextLink>
+                    <NextLink href="/Works" passHref>
+                        <Button as="a" color = {color}  variant={variantt} aria-label="Works" my={5}  marginX={2}>
+                            Works
+                        </Button>
+                    </NextLink>
+                    <NextLink href="/Blog" passHref>
+                        <Button as="a" color = {color}  variant={variantt} aria-label="Blog" my={5}  marginX={2}>
+                            Blogs
+                        </Button>
+                    </NextLink>
+                
+                
                 </Flex>
                 
                 <IconButton

@@ -3,7 +3,7 @@ import {Link} from '@chakra-ui/react'
 import { Spacer,Box,Container,VStack,Heading } from '@chakra-ui/layout'
 import React from 'react'
 import { Paragraph} from '../text/paragraph'
-import {  SiPython,SiJavascript,SiHtml5,SiC,SiCplusplus, SiGithub,SiLinkedin, SiTwitter, SiDiscord, SiGmail} from 'react-icons/si'
+import {  SiPython,SiJavascript,SiHtml5,SiC,SiCplusplus, SiGithub,SiLinkedin, SiTwitter, SiDiscord, SiGmail,SiSlack} from 'react-icons/si'
 import { Button, IconButton } from '@chakra-ui/button'
 import {motion} from 'framer-motion'
 
@@ -212,15 +212,14 @@ export const MeetMe = () => {
                                     Discord
                                 </Button>
                             </Link>
-
                             <Link _hover='none'href='mailto:vangmay.sachan16@gmail.com' target='_blank' w='100%' cursor='none'>
                                 <Button rightIcon={<SiGmail/>} variant={LinkVariant} cursor='none'>
                                     Mail
                                 </Button>
                             </Link>
-                            <Link _hover='none'href='mailto:vangmay.sachan16@gmail.com' target='_blank' w='fit-content' cursor='none'>
-                                <Button rightIcon={<SiGmail/>} variant={LinkVariant} cursor='none'>
-                                    Mail
+                            <Link _hover='none'href='https://hackclub.slack.com/team/U029BBS2K1V' target='_blank' w='fit-content' cursor='none'>
+                                <Button rightIcon={<SiSlack/>} variant={LinkVariant} cursor='none'>
+                                    Slack
                                 </Button>
                             </Link>
                         </VStack>

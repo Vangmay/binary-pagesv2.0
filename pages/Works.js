@@ -14,8 +14,6 @@ import { Paragraph } from '../components/text/paragraph'
 import { motion} from "framer-motion";
 import { Magazine} from '../components/misc/magazine';
 import ImageBox from '../components/misc/ImageBox'
-import dynamic from 'next/dynamic';
-import Loader from '../components/misc/modelLoader';
 export default function Works() {
     const bg= useColorModeValue('rgba(196,166,232,0.5)','rgba(13, 16, 33)')
     const title=useColorModeValue('light','dark')
@@ -91,7 +89,7 @@ export default function Works() {
                         fontFamily='Inconsolata'
                         marginTop='12px'
                     >
-                        _Works_
+                        /Works
                     </Box> 
                 </motion.div>
             </Container>
@@ -130,11 +128,11 @@ export default function Works() {
                         w='100%'
                         paddingRight={{base:'10px'}}
                     >
-                        <Link href='youtube.com' target='blank'  >  
-                            <Heading textAlign='left' variant={title} transition='0.2s ease-in'>Sthaapna.org</Heading>
-                        </Link>
+                        <Heading textAlign='left' variant={title} transition='0.2s ease-in'>Sthaapna.org</Heading>
                         <Paragraph >
-                            I Interned at Sthaapna, an Ngo working to empower the youth, where I made their entire website using HTML and CSS 
+                            I Interned at Sthaapna, an Ngo that works to empower the youth they conduct quizzes and events in various colleges about our Indian history, 
+                            where I made their entire website using HTML and CSS. 
+                            The website is not released as of now, I will put it at as soon as it gets released.  
                         </Paragraph>
                     </Box>
                     <Center w='100%' h='100%'  textAlign='center' >
@@ -157,7 +155,7 @@ export default function Works() {
                     width='100%'
                     color='#3e3e3e'
                     >
-                    2017
+                    2019
                 </Heading>
                 <HStack
                     w='100%'
@@ -178,9 +176,8 @@ export default function Works() {
                         w='100%' 
                         paddingRight={{base:'10px'}}
                         >
-                        <Link href='youtube.com' target='blank'  >  
-                            <Heading textAlign='left' variant={title} transition='0.2s ease-in'>The_Bridge</Heading>
-                        </Link>
+                        <Heading textAlign='left' variant={title} transition='0.2s ease-in'>The_Bridge & Cambridge_Chronicles</Heading>
+                        
                         <Paragraph >
                             My school has a literary club and we release our own magazine by the name of &quot;The bridge&quot;
                             We also have our own monthly newsletter.
@@ -206,7 +203,7 @@ export default function Works() {
                     width='100%'
                     color='#3e3e3e'
                 >
-                    2017
+                    2021
                 </Heading>
                 <HStack
                     w='100%'
@@ -232,7 +229,8 @@ export default function Works() {
                         </Link>
                         <Paragraph>
                             I am the junior club leader of the Byte Club at our school which was founded by the students. 
-                            I mainly conduct workshops, teaching young padwans about the basics of programming and beginner-friendly languages like HTML/CSS and also python.
+                            I mainly conduct workshops, teaching young padwans about the basics of programming and beginner-friendly languages.
+                            The workshops conducted till now: Introduction to programming, Web development(HTML/CSS)
                         </Paragraph>
                     </Box>
                     <Box w='100%'/>

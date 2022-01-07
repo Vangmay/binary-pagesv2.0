@@ -21,14 +21,13 @@ export const Magazine = () => {
                 <motion.div layout className='List-container'>
                         <Item 
                             title='The Bridge #7'
-                            paragraph='The is the first edition of the bridge that was designed by me, It was a tough task for me at first.
-                            Honestly,I did not even know weather I would be able to do it or not, But I was able to and everything went great.'
-                            href='https:www.youtube.com'
+                            paragraph='Second edition of the bridge that was designed by me. Theme: Gen-z'
+                            href='https://flipbooks.fleepit.com/f-24031-thebridge_7thedition'
                         />
                         <Item 
                             title='Cambridge Chronicles' 
-                            paragraph='FIRST NEWSLETTER OF OUR SCHOOL' 
-                            href='https:www.youtube.com'
+                            paragraph='First newsletter of our school designed by me and edited by Rimjhim, Mahi,Ojas,Yahya ' 
+                            href='https://flipbooks.fleepit.com/f-24486-cambridge_chronicles'
                         />
 
                 </motion.div>
