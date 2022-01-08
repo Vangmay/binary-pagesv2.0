@@ -80,11 +80,11 @@ export const Navbar = () => {
 
 
                     </NextLink>
-                    <NextLink href="https://github.com/Vangmay/binary-pagesv2.0" passHref>
+                    <a href="https://github.com/Vangmay/binary-pagesv2.0" target='_blank'>
                         <Button as="a" color = {color}  leftIcon={<IoLogoGithub/>} variant={variantt} aria-label="Home" mx={2} my={5} >
                         Source
                         </Button>
-                    </NextLink>
+                    </a>
                 </Flex>
                 
                 <Spacer />
