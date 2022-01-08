@@ -106,7 +106,7 @@ const Hero = () => {
                                     variant={theme} 
                                     as='h2'
                                     >
-                                    A site that renders my interests and hobbies                        
+                                                       
                                 </Heading>
                             </motion.div>
 

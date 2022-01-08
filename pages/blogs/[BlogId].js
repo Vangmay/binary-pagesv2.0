@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+    Box,
     Container,
     Heading,
     useColorModeValue
@@ -7,12 +8,14 @@ import {
 import { BlogParagraph } from "../../components/misc/BlogParagraph"
 import { BlogTag } from "../../components/misc/BlogTag"
 import fetch from "isomorphic-unfetch"
+import {DiscussionEmbed} from "disqus-react"
 
 function BlogPage({posts}) {
     const title = posts.title
     const date = posts.date
     const body = posts.body
     const tagg = posts.tag
+    const id = posts.id 
     const heroImage = posts.heroImage
     // console.log(posts)
     const Title =  title
@@ -78,10 +81,29 @@ function BlogPage({posts}) {
                     content={body}
                 /> 
             </Container>
-
+            <Box 
+                w ='100%'
+                alignContent='center'
+                display='flex'
+                justifyContent='center'
+            >
+                <Box w='70%'>
+                <DiscussionEmbed
+                    shortname='thebinary-pages'
+                    config={
+                        {
+                            url: 'http://localhost:3000',
+                            identifier: id,
+                            title: Title
+                        }
+                    }
+                    />
+                </Box>
+            </Box>
         </>
     )
 }
+
     
 export default BlogPage;
 
@@ -92,6 +114,8 @@ export async function getServerSideProps(context){
     const res = await fetch(urrl)
     const {data} = await res.json()
     const blogPosts = data.attributes
+    blogPosts.id = id 
+    console.log("blogposts",blogPosts)
     return{
         props:{
             posts:blogPosts

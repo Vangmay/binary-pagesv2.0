@@ -67,7 +67,6 @@ const rightSlide = {
 function Blog({posts}) {
     // const content = props.posts.data
     // console.log(content[0].attributes.title)
-    
     return (
         <>
             <ImageBox/>
