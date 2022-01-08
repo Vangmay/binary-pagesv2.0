@@ -80,7 +80,7 @@ export const Navbar = () => {
 
 
                     </NextLink>
-                    <NextLink href="/" passHref>
+                    <NextLink href="https://github.com/Vangmay/binary-pagesv2.0" passHref>
                         <Button as="a" color = {color}  leftIcon={<IoLogoGithub/>} variant={variantt} aria-label="Home" mx={2} my={5} >
                         Source
                         </Button>
