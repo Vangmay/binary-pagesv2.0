@@ -17,7 +17,6 @@ function BlogPage({posts}) {
     const tagg = posts.tag
     const id = posts.id 
     const heroImage = posts.heroImage
-    // console.log(posts)
     const Title =  title
     const tag   =  tagg
     return(
@@ -115,7 +114,6 @@ export async function getServerSideProps(context){
     const {data} = await res.json()
     const blogPosts = data.attributes
     blogPosts.id = id 
-    console.log("blogposts",blogPosts)
     return{
         props:{
             posts:blogPosts
