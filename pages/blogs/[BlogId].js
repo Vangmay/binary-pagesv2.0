@@ -31,7 +31,7 @@ function BlogPage({posts}) {
                 backgroundAttachment='fixed'
                 backgroundPosition='center'
                 backgroundRepeat='no-repeat'
-                backgroundSize='100%'
+                backgroundSize='cover'
             >   
             
 
@@ -63,9 +63,7 @@ function BlogPage({posts}) {
                     color={useColorModeValue('#24283b','#c0caf5')}
                 >
                     {date}
-                </Heading>
-                
-
+                </Heading>                
                 <BlogTag Tag={tag}/>
             </Container>
 

@@ -131,8 +131,9 @@ export default function Works() {
                         textAlign='center'
                     >
                         
-                        <Heading textAlign='left' fontFamily='Inconsolata' variant={title} transition='0.2s ease-in'>Byte_Club</Heading>
-                        
+                        <Heading textAlign='left' fontFamily='Inconsolata' variant={title} transition='0.2s ease-in'>
+                            Sthaapna_Org
+                        </Heading>
                         <Paragraph >
                             I Intern at Sthaapna, an Ngo that works to empower the youth they conduct quizzes and events in various colleges about our Indian history, 
                             where I made their entire website using HTML and CSS. 
