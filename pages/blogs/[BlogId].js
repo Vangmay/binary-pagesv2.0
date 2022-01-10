@@ -16,6 +16,7 @@ function BlogPage({posts}) {
     const date = posts.date
     const body = posts.body
     const tagg = posts.tag
+    const desc = posts.desc 
     const id = posts.id 
     const heroImage = posts.heroImage
     const Title =  title
@@ -25,11 +26,13 @@ function BlogPage({posts}) {
         <>
             <Head>
                 <title>{title}</title>
-                <meta name="author" content="Vangmay Sachan" />
-                <meta name="description" content={posts.desc}/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <meta name="description" content={desc}/>
                 <meta name="og:title" content={title}/>
+                <meta name="author" content="Vangmay Sachan" />
                 <meta name="og:type" content='website'/>
                 <meta name="og:image" content={heroImage}/>
+                <meta name="twitter:image" content={heroImage}/>
             </Head>
             <Container 
                 textAlign='center' 
