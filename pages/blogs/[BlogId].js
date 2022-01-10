@@ -100,7 +100,7 @@ function BlogPage({posts}) {
                     shortname='thebinary-pages'
                     config={
                         {
-                            url: 'https://www.thebinary-pages.com/',
+                            url: `https://www.thebinary-pages.com/blogs/${id}`,
                             identifier: id,
                             title: Title
                         }
