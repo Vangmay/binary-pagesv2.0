@@ -32,7 +32,6 @@ function BlogPage({posts}) {
                 <meta name="author" content="Vangmay Sachan" />
                 <meta name="og:type" content='website'/>
                 <meta name="og:image" content={heroImage}/>
-                <meta name="twitter:image" content={heroImage}/>
             </Head>
             <Container 
                 textAlign='center' 
