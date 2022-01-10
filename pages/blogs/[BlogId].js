@@ -25,9 +25,11 @@ function BlogPage({posts}) {
         <>
             <Head>
                 <title>{title}</title>
-                <meta name='Title' content={title}  />
-                <meta name='Author' content='Vangmay'  />
-                <meta name='Date' content={date}  />
+                <meta name="author" content="Vangmay Sachan" />
+                <meta name="description" content={posts.desc}/>
+                <meta name="og:title" content={title}/>
+                <meta name="og:type" content={title}/>
+                <meta name="og:image" content={heroImage}/>
             </Head>
             <Container 
                 textAlign='center' 

@@ -14,10 +14,11 @@ function Layout({ children }) {
         <Cursor/>
         <Box as='main' transition='0.2s' >
             <Head>
-                <title>The_Binary_pagesV2.0</title>
+                <title>The Binary pages</title>
                 <meta name="author" content="VangmaySachan" />
-                <meta name="description" content="Welcome to the The binarypages" />
-                
+                <meta name="description" content="-_-_-_-_-Vangmay's Website_-_-_-_-_-" />
+                <meta name="og:site_name" content='The binary pages'/>
+                <meta name="og:type" content='Website'/>
             </Head>
             <Helmet bodyAttributes={{style:`background-color:${bg};` }}/>
             <Navbar/>
