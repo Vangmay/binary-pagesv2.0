@@ -28,7 +28,7 @@ function BlogPage({posts}) {
                 <meta name="author" content="Vangmay Sachan" />
                 <meta name="description" content={posts.desc}/>
                 <meta name="og:title" content={title}/>
-                <meta name="og:type" content={title}/>
+                <meta name="og:type" content='website'/>
                 <meta name="og:image" content={heroImage}/>
             </Head>
             <Container 
