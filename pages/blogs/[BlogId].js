@@ -9,6 +9,7 @@ import { BlogParagraph } from "../../components/misc/BlogParagraph"
 import { BlogTag } from "../../components/misc/BlogTag"
 import fetch from "isomorphic-unfetch"
 import {DiscussionEmbed} from "disqus-react"
+import Head from 'next/head';
 
 function BlogPage({posts}) {
     const title = posts.title
@@ -22,6 +23,12 @@ function BlogPage({posts}) {
     return(
         
         <>
+            <Head>
+                <title>{title}</title>
+                <meta name='Title' content={title}  />
+                <meta name='Author' content='Vangmay'  />
+                <meta name='Date' content={date}  />
+            </Head>
             <Container 
                 textAlign='center' 
                 minW='100vw' 
@@ -89,7 +96,7 @@ function BlogPage({posts}) {
                     shortname='thebinary-pages'
                     config={
                         {
-                            url: 'http://localhost:3000',
+                            url: 'https://www.thebinary-pages.com/',
                             identifier: id,
                             title: Title
                         }

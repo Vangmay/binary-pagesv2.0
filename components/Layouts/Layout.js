@@ -15,6 +15,7 @@ function Layout({ children }) {
         <Box as='main' transition='0.2s' >
             <Head>
                 <title>The_Binary_pagesV2.0</title>
+                <meta name="author" content="VangmaySachan" />
                 <meta name="description" content="Welcome to the The binarypages" />
                 
             </Head>
