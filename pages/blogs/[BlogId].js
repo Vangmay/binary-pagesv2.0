@@ -21,6 +21,12 @@ function BlogPage({posts}) {
     const heroImage = posts.heroImage
     const Title =  title
     const tag   =  tagg
+    const Shortname = 'thebinary-pages'
+    const Config = {
+        identifier:id,
+        url :`https://www.thebinary-pages.com`,
+        title:Title, 
+    }
     return(
         
         <>
@@ -95,17 +101,11 @@ function BlogPage({posts}) {
                 display='flex'
                 justifyContent='center'
             >
-                <Box w='70%'>
+            <Box w='70%'>
                 <DiscussionEmbed
-                    shortname='thebinary-pages'
-                    config={
-                        {
-                            url: `https://www.thebinary-pages.com/blogs/${id}`,
-                            identifier: id,
-                            title: Title
-                        }
-                    }
-                    />
+                    shortname={Shortname}
+                    config={Config}
+                />
                 </Box>
             </Box>
         </>

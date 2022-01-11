@@ -1,5 +1,6 @@
 import { Box, Heading } from '@chakra-ui/react'
 import React from 'react'
+import { useRouter } from 'next/router'
 
 const ImgBox = () => {
     return(
@@ -19,6 +20,10 @@ const ImgBox = () => {
 }
 
 function NotFound() {
+    const router = useRouter()
+    setInterval(function(){
+        router.push('/')
+    },2000)
     return (
         <>
             <ImgBox/>
