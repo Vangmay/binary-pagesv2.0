@@ -142,7 +142,7 @@ export default function Works() {
                         
                     </Box>
                     <Center w='100%'   textAlign='center' >
-                        <Img src='/Images/Mockupp.png' />
+                        <Img src='/Images/Mockupp.webp' />
                     </Center>
                 </HStack>
             </VStack>
