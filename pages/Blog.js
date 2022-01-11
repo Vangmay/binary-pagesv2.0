@@ -78,7 +78,6 @@ function Blog({posts}) {
                 {posts.map(post=>{
                     const id = post.id 
                     const blog = post.attributes
-                    console.log(id)
                     if (id % 2 == 0) {
                         var slide = rightSlide
                     } else {
@@ -127,6 +126,7 @@ export async function getServerSideProps(){
     const res = await fetch(url)
     const {data} = await res.json()
     const posts = data
+    posts.sort((a, b) => parseFloat(b.id) - parseFloat(a.id));
     return{
         props:{
             posts:posts
