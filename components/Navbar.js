@@ -42,7 +42,7 @@ export const Navbar = () => {
             margin={0}
             position='fixed'
             transition='0.20s all ease-in-out'
-            zIndex={1200}
+            zIndex={900000}
             backdropFilter='blur(2px) hue-rotate(20deg) saturate(20%)'
         >
             <Container
@@ -185,7 +185,7 @@ export const Navbar = () => {
                             
                         </DrawerBody>
                         <DrawerFooter >
-                                    <Text w='100%' textAlign='center' fontSize={{sm:'12px',md:'15px'}}>&copy; {new Date().getFullYear()} Vangmay Sachan. All rights reserved</Text>
+                                    <Text w='100%' textAlign='center' fontSize={{sm:'12px',md:'15px'}}></Text>
                         </DrawerFooter>
                     </DrawerContent>
 

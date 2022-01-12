@@ -25,7 +25,7 @@ export const Cursor = () => {
             // mixBlendMode='exclusion'
             backdropFilter='blur(1px) saturate(200%) brightness(120%)'
             position='fixed'
-            zIndex='100000'
+            zIndex='999999'
             border='2.5px dotted'
             display={{base:'none',md:'flex',lg:'flex'}}
             borderColor={Color}

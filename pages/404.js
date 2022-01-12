@@ -1,23 +1,8 @@
 import { Box, Heading } from '@chakra-ui/react'
 import React from 'react'
 import { useRouter } from 'next/router'
-
-const ImgBox = () => {
-    return(
-        <Box 
-            w="100%" 
-            h="50vh" 
-            background='url("/Images/About-gif.gif")'
-            bgSize='cover'
-            bgPosition='left'
-            bgRepeat='no-repeat'
-            alignItems='center'
-            textAlign='right'
-            justifyContent='right'
-            display='flex'
-        />
-    )
-}
+import styles from '../styles/Home.module.css'
+import ImageBox from '../components/misc/ImageBox'
 
 function NotFound() {
     const router = useRouter()
@@ -26,7 +11,7 @@ function NotFound() {
     },2000)
     return (
         <>
-            <ImgBox/>
+            <ImageBox/>
             <Box
                 h='100vh'
                 minH='100%'

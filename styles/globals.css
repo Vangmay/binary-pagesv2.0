@@ -91,6 +91,8 @@ a {
   height: 100%;
   width: 100%;
 }
+
+
 @media screen and (max-width : 80em) { 
   .list{
     padding: 12px;
