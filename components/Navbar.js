@@ -42,7 +42,7 @@ export const Navbar = () => {
             margin={0}
             position='fixed'
             transition='0.20s all ease-in-out'
-            zIndex={900000}
+            zIndex={90000}
             backdropFilter='blur(2px) hue-rotate(20deg) saturate(20%)'
         >
             <Container
@@ -139,6 +139,7 @@ export const Navbar = () => {
                     colorScheme='cyan'
                     aria-label='color mode switched'
                     onClick={toggleColorMode}
+                    zIndex={800000}
                 />
                 {/* mobile nav -------------------------------------------------*/}
                 <Drawer
@@ -147,17 +148,13 @@ export const Navbar = () => {
                     onClose={onClose}
                     finalFocusRef={btnRef}
                     bg={MobnavBg}
-                    zIndex={900000}
                 >
                     <DrawerOverlay/>
                     <DrawerContent 
-                        positon='fixed'
-                        zIndex={900000}
                         bg={MobnavBg} 
-                    
+                        
                     >
                         <DrawerFooter padding='12px'>
-                            <IconButton icon = {<CloseIcon/>} bg={MobnavBg} onClick={onClose} variant={variantt} maxW='fit-content'/>
                         </DrawerFooter>
                         <DrawerBody >
 
@@ -170,6 +167,7 @@ export const Navbar = () => {
                                     flexDirection='column'
                                     // display={['none','none','flex','flex']}
                                 >
+                                <IconButton icon = {<CloseIcon/>} bg={MobnavBg} onClick={onClose} variant={variantt} maxW='fit-content'/>
                                 <NextLink href="/About" passHref>
                                     <Button as="a" color = {color}  variant={variantt} aria-label="About" my={5}  marginX={2}>
                                         About
