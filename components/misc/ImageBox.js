@@ -22,7 +22,7 @@ const ImageBox = () => {
         > 
             <Box
                 position='absolute'
-                zIndex='10000'
+                zIndex='1000'
                 top={0}
                 left={0}
                 bg='red'

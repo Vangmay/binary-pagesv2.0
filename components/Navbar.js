@@ -147,9 +147,15 @@ export const Navbar = () => {
                     onClose={onClose}
                     finalFocusRef={btnRef}
                     bg={MobnavBg}
+                    zIndex={900000}
                 >
                     <DrawerOverlay/>
-                    <DrawerContent bg={MobnavBg} >
+                    <DrawerContent 
+                        positon='fixed'
+                        zIndex={900000}
+                        bg={MobnavBg} 
+                    
+                    >
                         <DrawerFooter padding='12px'>
                             <IconButton icon = {<CloseIcon/>} bg={MobnavBg} onClick={onClose} variant={variantt} maxW='fit-content'/>
                         </DrawerFooter>
