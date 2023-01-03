@@ -221,11 +221,6 @@ export const MeetMe = () => {
                                     Mail
                                 </Button>
                             </Link>
-                            <Link _hover='none'href='https://hackclub.slack.com/team/U029BBS2K1V' target='_blank' w='fit-content' cursor='none'>
-                                <Button rightIcon={<SiSlack/>} variant={LinkVariant} cursor='none'>
-                                    Slack
-                                </Button>
-                            </Link>
                         </VStack>
                     </Box>
                 </motion.div>
