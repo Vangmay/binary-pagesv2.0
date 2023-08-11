@@ -116,9 +116,23 @@ export const MeetMe = () => {
                         >WhoAmI?
                         </Heading>
                         <Paragraph>
-                            I am a 16 year old OF TOTALLY NORMAL HEIGHT. Currently I am panicking about my AS/A levels,However I don't let that stop my from following the things that i am interested in. 
-                            I enjoy writing code, I usually do things in python but these days its Javascript. I usually challange myself by taking up tasks I think I can't do, but somehow end up doing them.
-                            I also like designing and trying out new things in it, Recently i have been making voxel art(It's bad)
+                            I am an undergraduate student at⠀
+                        
+                            <Link w='100%' _hover='none' href='https://github.com/Vangmay' target='_blank' cursor='none'>
+                                <Heading display='inline-block' as='h6' fontWeight='light'fontSize='16px'color={highLight} textDecoration='#3e3e3e underline wavy 1.2px'>  National University of Singapore</Heading>
+                            </Link>, majoring in Computer Science. 
+                            
+
+
+                            I enjoy writing code and hacking stuff, I am a pythonista by heart but not afraid to use C if needed.
+                            I have a knack for things related to organizing hackathons/competitions/workshops. Currently I am working on hosting CodeDay Singapore along with 
+                            
+
+                            <Link w='100%' _hover='none' href='https://www.linkedin.com/in/kushagra7shrivastava' target='_blank' cursor='none'>
+                                <Heading display='inline-block' as='h6' fontWeight='light'fontSize='16px'color={highLight} textDecoration='#3e3e3e underline wavy 1.2px'>my friend Kushagra.</Heading>
+                            </Link> 
+                            ⠀I really enjoy tackling projects that nudge me out of my comfort zone and help me learn new things!
+                            I also enjoy teaching others about topics that I find interesting and taking part in fun discussions about them, so feel free to reach out 👋. 
                         </Paragraph>
                     </Box>
                 </motion.div>
