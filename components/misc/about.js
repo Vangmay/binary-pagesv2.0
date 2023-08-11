@@ -118,7 +118,7 @@ export const MeetMe = () => {
                         <Paragraph>
                             I am an undergraduate student at⠀
                         
-                            <Link w='100%' _hover='none' href='https://github.com/Vangmay' target='_blank' cursor='none'>
+                            <Link w='100%' _hover='none' href='https://nus.edu.sg/' target='_blank' cursor='none'>
                                 <Heading display='inline-block' as='h6' fontWeight='light'fontSize='16px'color={highLight} textDecoration='#3e3e3e underline wavy 1.2px'>  National University of Singapore</Heading>
                             </Link>, majoring in Computer Science. 
                             
